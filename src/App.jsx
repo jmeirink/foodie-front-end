@@ -20,6 +20,14 @@ const App = () => {
     navigate('/')
   }
 
+  useEffect (() => {
+    const fetchAllPosts = async () => {
+      const postData = await postService.getAll()
+      setPosts(postData)
+    }
+    fetchAllPosts()
+  })
+
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
