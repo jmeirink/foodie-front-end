@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Signup from './pages/Signup/Signup'
@@ -7,9 +7,11 @@ import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import * as authService from './services/authService'
 import AddPost from './pages/AddPost/AddPost'
+import * as postService from './services/postService'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
+  const [posts, setPosts] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -22,11 +24,17 @@ const App = () => {
     setUser(authService.getUser())
   }
 
+  const handleAddPost = async postData => {
+    const newPost = await postService.create(postData)
+    setPosts([...posts, newPost])
+    navigate('/')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/new" element={<AddPost />} />
+        <Route path="/add" element={<AddPost handleAddPost={handleAddPost} />} />
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
