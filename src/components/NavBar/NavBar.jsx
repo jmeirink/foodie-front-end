@@ -1,23 +1,20 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       {user ?
         <nav>
-          <ul>
-            <li>Welcome, {user.name}</li>
-            <li><Link to="/profiles">Profiles</Link></li>
-            <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
-            <li><Link to="/changePassword">Change Password</Link></li>
-          </ul>
+          <h1>Foodie</h1>
+          <NavLink to="/restaurants/new">Add Restaurant +</NavLink>
+          <NavLink to="" onClick={handleLogout}>LOG OUT</NavLink>
+          <NavLink to="/changePassword">Change Password</NavLink>
         </nav>
       :
         <nav>
-          <ul>
-            <li><Link to="/login">Log In</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
-          </ul>
+          <h1>Foodie</h1>
+          <NavLink to="/login">Log In</NavLink>
+          <NavLink to="/signup">Sign Up</NavLink>
         </nav>
       }
     </>
