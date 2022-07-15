@@ -26,7 +26,7 @@ const App = () => {
       setPosts(postData)
     }
     fetchAllPosts()
-  })
+  },[])
 
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
