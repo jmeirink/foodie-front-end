@@ -19,6 +19,7 @@ const AddPost = (props) => {
     e.preventDefault()
     try {
       //call to back end goes here
+      props.handleAddPost(formData)
       navigate('/')
     } catch (err) {
         console.log(err)
