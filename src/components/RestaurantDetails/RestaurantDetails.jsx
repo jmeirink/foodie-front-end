@@ -1,16 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import { searchRestaurant } from '../../services/foodService';
 
 const RestaurantDetails = () => {
-  const [restaurants, setRestaurants] = useState([])
+  const [restaurantDetails, setRestaurantDetails] = useState({})
+  const { restaurantName } = useParams()
 
-  useEffect (() => {
-    const fetchAllRestaurants = async () => {
-      const restaurantData = await searchRestaurant.getAll()
-      setRestaurants(restaurantData)
+	useEffect(() => {
+    const fetchRestaurantDetails = async () => {
+      const restaurantData = await searchRestaurant(restaurantName)
+      setRestaurantDetails(restaurantData)
     }
-    fetchAllRestaurants()
-  },[])
+    fetchRestaurantDetails()
+  }, [restaurantName])
 
 
   return (
