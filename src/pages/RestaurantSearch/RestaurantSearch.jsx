@@ -1,34 +1,34 @@
 import { useState } from 'react'
 import SearchForm from '../../components/SearchForm/SearchForm';
 import { searchRestaurant } from '../../services/foodService';
-import SpellCard from '../../components/SpellCard/SpellCard';
+import RestaurantCard from '../../components/RestaurantCard/RestaurantCard';
 
-const SpellSearch = () => {
-  const [spells, setSpells] = useState([])
+const RestaurantSearch = () => {
+  const [restaurants, setRestaurants] = useState([])
   
-	const handleSpellSearch = async (formData) => {
-    const spellResults = await spellSearch(formData)
-    setSpells(spellResults.results)
+	const handleRestaurantSearch = async (formData) => {
+    const restaurantResults = await searchRestaurant(formData)
+    setRestaurants(restaurantResults.results)
   }
 
   return (
     <>
-      <h3>Such Spellz</h3>
-      <SearchForm handleSpellSearch={handleSpellSearch} />
-      {spells.length ? 
+      <h3>Such Restaurantz</h3>
+      <SearchForm handleRestaurantSearch={handleRestaurantSearch} />
+      {restaurants.length ? 
         <>
-          {spells.map(spell => 
-            <SpellCard 
-              spell={spell}
-              key={spell.index}
+          {restaurants.map(restaurant => 
+            <RestaurantCard 
+              restaurant={restaurant}
+              key={restaurant.index}
             />
           )}
         </>
         :
-        <h3>Please search for a spell!</h3>
+        <h3>Please search for a Restaurant!</h3>
       }
     </>
   );
 }
 
-export default SpellSearch;
+export default RestaurantSearch;
