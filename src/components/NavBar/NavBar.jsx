@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
+
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
@@ -11,6 +12,14 @@ const NavBar = ({ user, handleLogout }) => {
 
           <div className='sidebarOption'>
           <h2><span class="material-symbols-outlined">home</span>Home</h2>
+          </div>
+
+          <div className='sidebarOption'>
+          <h2><span class="material-symbols-outlined">person</span>Profile</h2>
+          </div>
+
+          <div className='sidebarOption'>
+          <h2><span class="material-symbols-outlined">group</span>Friends</h2>
           </div>
 
           <div className='sidebarOption'>

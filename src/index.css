@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.logo {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
 .sidebarOption {
   display: flex;
   align-items: center;
