@@ -29,7 +29,7 @@
 .sidebarOption:hover {
   background-color: black;
   color: white;
-  border-radius: 30px;
+  border-radius: 10px;
   transition: color 100ms ease-out;
 }
 
