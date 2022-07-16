@@ -6,7 +6,6 @@ const SearchForm = (props) => {
   const handleChange = evt => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
-  // works for multiple forms ****
 
   const handleSubmit = evt => {
     evt.preventDefault()
