@@ -9,6 +9,7 @@ import * as authService from './services/authService'
 import AddPost from './pages/AddPost/AddPost'
 import * as postService from './services/postService'
 import PostList from './pages/PostList/PostList'
+import EditPost from './pages/EditPost/EditPost'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -39,13 +40,35 @@ const App = () => {
     navigate('/')
   }
 
+  const handleDeletePost = async postId => {
+    const deletedPost = await postService.deletePost(postId)
+    const newPostsArray = posts.filter(post => post._id !== deletedPost._id)
+    setPosts(newPostsArray)
+    navigate('/')
+    
+  }
+
+  const handleUpdatePost = async (postData) => {
+    const updatedPost = await postService.updatePost(postData)
+    // map state to new array
+    const newPostsArray = posts.map(post => post._id === updatedPost._id ? updatedPost : post)
+    // use new array to set new state
+    setPosts(newPostsArray)
+    navigate('/')
+    
+  }
+
+  
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/add" element={<AddPost handleAddPost={handleAddPost} />} 
         />
-        <Route path="/" element={<PostList posts={posts}/>} 
+        <Route path="/edit" element={<EditPost handleUpdatePost={handleUpdatePost}  />} 
+        />
+        <Route path="/" element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} />} 
         />
         <Route
           path="/signup"
