@@ -9,6 +9,8 @@ import * as authService from './services/authService'
 import AddPost from './pages/AddPost/AddPost'
 import * as postService from './services/postService'
 import PostList from './pages/PostList/PostList'
+import RestaurantSearch from './pages/RestaurantSearch/RestaurantSearch'
+
 import EditPost from './pages/EditPost/EditPost'
 
 const App = () => {
@@ -64,7 +66,13 @@ const App = () => {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/add" element={<AddPost handleAddPost={handleAddPost} />} 
+        <Route path="/add" element={
+          <AddPost 
+            handleAddPost={handleAddPost}
+            RestaurantSearch={<RestaurantSearch />}
+          />} 
+        />
+        <Route path="/restaurants/new" element={user ? <RestaurantSearch /> : <Navigate to="/login" />}
         />
         <Route path="/edit" element={<EditPost handleUpdatePost={handleUpdatePost}  />} 
         />

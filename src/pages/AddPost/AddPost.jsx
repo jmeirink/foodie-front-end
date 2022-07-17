@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from './AddPost.module.css'
 
 const AddPost = (props) => {
@@ -31,29 +31,35 @@ const AddPost = (props) => {
     return !(review)
   }
 
-    return (
-        <>
-        <h1>Add a Post</h1>
-        <form onSubmit={handleSubmit} autoComplete="off" className={styles.container}>
+  return (
+    <>
+      <h1>Add a Post</h1>
+
+      <form 
+        onSubmit={handleSubmit} 
+        autoComplete="off" 
+        className={styles.container}
+      >
         <div className={styles.inputContainer}>
-        <label htmlFor="review" className={styles.label}>Review</label>
-        <textarea
-          type="text"
-          autoComplete="off"
-          id="review"
-          value={review}
-          name="review"
-          onChange={handleChange}
-        />
-      </div>
-      <button disabled={isFormInvalid()} className={styles.button}>
+          <label htmlFor="review" className={styles.label}>Review</label>
+          <textarea
+            type="text"
+            autoComplete="off"
+            id="review"
+            value={review}
+            name="review"
+            onChange={handleChange}
+          />
+        </div>
+        <button disabled={isFormInvalid()} className={styles.button}>
           Add Post
         </button>
 
-        </form>
-        </>
-    );
-   
+
+
+      </form>
+    </>
+  );
 }
- 
-export default AddPost ;
+
+export default AddPost;
