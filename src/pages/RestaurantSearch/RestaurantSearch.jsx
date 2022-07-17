@@ -13,7 +13,7 @@ const RestaurantSearch = () => {
 
   return (
     <>
-      <h3>Such Restaurantz</h3>
+      <h3>Restaurant Search</h3>
       <SearchForm handleRestaurantSearch={handleRestaurantSearch} />
       {restaurants.length ? 
         <>

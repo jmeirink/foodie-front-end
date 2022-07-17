@@ -9,7 +9,8 @@ import * as authService from './services/authService'
 import AddPost from './pages/AddPost/AddPost'
 import * as postService from './services/postService'
 import PostList from './pages/PostList/PostList'
-import RestaurantDetails from './components/RestaurantDetails/RestaurantDetails'
+import RestaurantSearch from './pages/RestaurantSearch/RestaurantSearch'
+
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -47,13 +48,10 @@ const App = () => {
         <Route path="/add" element={
           <AddPost 
             handleAddPost={handleAddPost}
-            RestaurantDetails={<RestaurantDetails />}
+            RestaurantSearch={<RestaurantSearch />}
           />} 
         />
-        <Route path="/restaurants/new" element={
-          <RestaurantDetails 
-            RestaurantDetails={RestaurantDetails}
-          />} 
+        <Route path="/restaurants/new" element={user ? <RestaurantSearch /> : <Navigate to="/login" />}
         />
         <Route path="/" element={<PostList posts={posts}/>} 
         />
