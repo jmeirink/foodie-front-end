@@ -1,15 +1,18 @@
-const PostCard  = (props) => {
+import { Link } from "react-router-dom";
+
+const PostCard  = ({post, user, handleDeletePost}) => {
 
     return (  
         <>
         <div className="card">
             <div className="card-body">
-                <p>{props.post.author?.name}</p>
-                <h2 className="card-text">{props.post.review}</h2>
+                <p>{post.author?.name}</p>
+                <h2 className="card-text">{post.review}</h2>
             </div>
-            {props.user?.profile === props.post.author._id &&
+            {user?.profile === post.author._id &&
             <div className="post-footer">
-                <button onClick={()=> props.handleDeletePost(props.post._id)}>Delete</button>
+                <button onClick={()=> handleDeletePost(post._id)}>Delete</button>
+                <Link to='/edit' state={{post}} >Edit</Link>
             </div>
             }
         </div>
