@@ -1,7 +1,10 @@
 import { useState } from "react";
 
 const SearchForm = (props) => {
-  const [formData, setFormData] = useState({location: '', query: ''})
+  const [formData, setFormData] = useState({
+    location: '', 
+    query: ''
+  })
 
   const handleChange = evt => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value })
