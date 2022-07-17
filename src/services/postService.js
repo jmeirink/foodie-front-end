@@ -19,8 +19,32 @@ async function getAll() {
   return await res.json()
 }
 
+async function deletePost(postId) {
+  const res = await fetch(`${BASE_URL}/${postId}`, {
+    method: "DELETE",
+    headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+    }
+  })
+  return await res.json()
+}
+
+async function updatePost(postData) {
+  const res = await fetch(`${BASE_URL}/${postData._id}`, {
+    method: "PUT",
+    headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type' : 'application/json'
+    },
+    body: JSON.stringify(postData)
+  })
+  return await res.json()
+}
+
 
 export { 
   create,
-  getAll
+  getAll,
+  deletePost,
+  updatePost,
  }
