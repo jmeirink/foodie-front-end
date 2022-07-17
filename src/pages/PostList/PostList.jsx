@@ -5,8 +5,8 @@ const PostList = (props) => {
         <>
         <h1>Posts</h1>
         {props.posts.map(post =>
-            <PostCard key={post._id} post={post}/>
-            
+        <PostCard user={props.user} key={post._id} post={post} handleDeletePost={props.handleDeletePost} />
+        
         )}
         
         </>

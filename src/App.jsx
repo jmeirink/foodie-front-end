@@ -39,13 +39,21 @@ const App = () => {
     navigate('/')
   }
 
+  const handleDeletePost = async postId => {
+    const deletedPost = await postService.deletePost(postId)
+    const newPostsArray = posts.filter(post => post._id !== deletedPost._id)
+    setPosts(newPostsArray)
+    navigate('/')
+    
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
         <Route path="/add" element={<AddPost handleAddPost={handleAddPost} />} 
         />
-        <Route path="/" element={<PostList posts={posts}/>} 
+        <Route path="/" element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} />} 
         />
         <Route
           path="/signup"
