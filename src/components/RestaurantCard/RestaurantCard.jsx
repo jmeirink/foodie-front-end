@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 
 const RestaurantCard = (props) => {
   return ( 
@@ -14,7 +13,7 @@ const RestaurantCard = (props) => {
           <h5 className="card-text">{props.restaurant.name}</h5>
           <p>{props.restaurant.location.address1}</p>
           <p>{props.restaurant.location.city}, {props.restaurant.location.state} {props.restaurant.location.zip_code}</p>
-          
+
 
 
         </div>
