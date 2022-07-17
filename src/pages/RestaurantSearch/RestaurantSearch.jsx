@@ -8,7 +8,7 @@ const RestaurantSearch = () => {
   
 	const handleRestaurantSearch = async (formData) => {
     const restaurantResults = await searchRestaurant(formData)
-    setRestaurants(restaurantResults.results)
+    setRestaurants(restaurantResults.result.businesses)
   }
 
   return (
@@ -19,8 +19,8 @@ const RestaurantSearch = () => {
         <>
           {restaurants.map(restaurant => 
             <RestaurantCard 
+              key={restaurant.id}
               restaurant={restaurant}
-              key={restaurant.index}
             />
           )}
         </>

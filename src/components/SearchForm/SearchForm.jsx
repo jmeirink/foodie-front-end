@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const SearchForm = (props) => {
   const [formData, setFormData] = useState({
-    location: '', 
-    query: ''
+    query: '',
+    location: '' 
   })
 
   const handleChange = evt => {
@@ -19,20 +19,20 @@ const SearchForm = (props) => {
     <>
       <div>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="location-input" className="form-label">Location</label>
-          <input 
-            type="text" 
-            name="location" 
-            autoComplete="off"
-            value={formData.location}
-            onChange={handleChange}
-          />
           <label htmlFor="location-input" className="form-label">Search:</label>
           <input 
             type="text" 
             name="query" 
             autoComplete="off"
             value={formData.query}
+            onChange={handleChange}
+          />
+          <label htmlFor="location-input" className="form-label">Location (or zip)</label>
+          <input 
+            type="text" 
+            name="location" 
+            autoComplete="off"
+            value={formData.location}
             onChange={handleChange}
           />
           <button type="submit">Search</button>
