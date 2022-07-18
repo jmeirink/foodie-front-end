@@ -12,6 +12,7 @@ import PostList from './pages/PostList/PostList'
 import RestaurantSearch from './pages/RestaurantSearch/RestaurantSearch'
 import EditPost from './pages/EditPost/EditPost'
 import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
+import PostDetails from './pages/PostDetails/PostDetails'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -75,6 +76,42 @@ const App = () => {
       <NavBar user={user} handleLogout={handleLogout} />
       <div className='content'>
       <Routes>
+        <Route path="/add" element={
+          <AddPost 
+            handleAddPost={handleAddPost}
+            RestaurantSearch={<RestaurantSearch />}
+          />} 
+        />
+        <Route path="/restaurants/new" element={user ? <RestaurantSearch /> : <Navigate to="/login" />}
+        />
+        <Route path="/edit" element={<EditPost handleUpdatePost={handleUpdatePost}  />} 
+        />
+        <Route path="/" element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} />} 
+        />
+
+        {/* ---------------------------- */}
+
+        <Route path="/posts/:postId" element={<PostDetails user={user} posts={posts} />} 
+        />
+        
+        {/* ---------------------------- */}
+
+        <Route
+          path="/signup"
+          element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
+        />
+        <Route
+          path="/login"
+          element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
+        />
+        <Route
+          path="/profiles"
+          element={user ? <Profiles /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/profiles/:profileName"
+          element={user ? <ProfileDetails /> : <Navigate to="/login" />}
+        />
         <Route path="/add" element={ <AddPost handleAddPost={handleAddPost} RestaurantSearch={<RestaurantSearch />}/>} />
 
         <Route path="/restaurants/new" element={user ? <RestaurantSearch /> : <Navigate to="/login" />}/>
