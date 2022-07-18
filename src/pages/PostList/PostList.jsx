@@ -1,4 +1,5 @@
 import PostCard from "../../components/PostCard/PostCard";
+import styles from "../../../src/App.css"
 
 const PostList = (props) => {
   return (  
