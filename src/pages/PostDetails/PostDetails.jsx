@@ -1,18 +1,14 @@
-
+import { useState, useEffect } from "react";
 
 const PostDetails = (props) => {
   return (  
       <>
         <h1>Post Details</h1>
-        {props.posts.map(post =>
+        
           <div>
-            <h2>Author: {post.author.name}</h2>
-            <h2>ID: {post.author._id}</h2>
+            <h2>Post details component</h2>
+            <h2>Post details component</h2>
           </div>
-
-
-          
-        )}
         
         {/* Display post author */}
         {/* Display post details */}

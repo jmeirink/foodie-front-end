@@ -83,7 +83,7 @@ const App = () => {
 
         {/* ---------------------------- */}
 
-        <Route path="/postdetails" element={<PostDetails user={user} posts={posts} />} 
+        <Route path="/posts/:postId" element={<PostDetails user={user} posts={posts} />} 
         />
         
         {/* ---------------------------- */}
