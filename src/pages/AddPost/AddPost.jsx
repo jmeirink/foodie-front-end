@@ -6,8 +6,11 @@ const AddPost = (props) => {
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
     review: '',
+    foodBeverage: 'Food',
+    itemTitle: '',
+    itemPrice: ''
   })
-  const [photoData, setPhotoData] = useState({})
+  // const [photoData, setPhotoData] = useState({})
 
   const handleChange = e => {
     setFormData({
@@ -15,6 +18,10 @@ const AddPost = (props) => {
       [e.target.name]: e.target.value,
     })
   }
+
+  // const handleChangePhoto = (evt) => {
+  //   setPhotoData({ photo: evt.target.files[0] })
+  // }
 
   const handleSubmit = async e => {
     e.preventDefault()
@@ -27,11 +34,6 @@ const AddPost = (props) => {
     }
   }
   
-  const handleChangePhoto = (evt) => {
-    setPhotoData({ photo: evt.target.files[0] })
-  }
-
-
   const {review} = formData
   const isFormInvalid = () => {
     return !(review)
@@ -53,10 +55,19 @@ const AddPost = (props) => {
             <input 
               type="text"
               id="item-input"
-              name="item"
-              value={formData.item}
+              name="itemTitle"
+              value={formData.itemTitle}
               onChange={handleChange}
-              required
+            />
+            <label htmlFor="item-price-input" className="form-label">
+              Item Price
+            </label>
+            <input 
+              type="text"
+              id="item-price-input"
+              name="itemPrice"
+              value={formData.itemPrice}
+              onChange={handleChange}
             />
           </div>
         <div className={styles.inputContainer}>
@@ -82,7 +93,7 @@ const AddPost = (props) => {
               <option value="Beverage">Beverage</option>
             </select>
         </div>
-        <div className={styles.inputContainer}>
+        {/* <div className={styles.inputContainer}>
 					<label htmlFor="photo-upload" className="form-label">
 						Upload Photo
 					</label>
@@ -93,7 +104,7 @@ const AddPost = (props) => {
 						name="photo"
 						onChange={handleChangePhoto}
 					/>
-				</div>
+				</div> */}
         <button disabled={isFormInvalid()} className={styles.button}>
           Add Post
         </button>
