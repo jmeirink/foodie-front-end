@@ -26,3 +26,32 @@
     color: var(--secondary-dark);
     margin-bottom: 5vmin;
   }
+
+  body {
+    display: flex;
+    margin: 0px;
+    flex-direction: row;
+
+  }
+
+  #root {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    justify-items: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .card {
+    width: 40vw;
+    margin-left: 20vw;
+    margin-top: 5vh;
+  }
