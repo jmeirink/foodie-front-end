@@ -47,4 +47,4 @@ export {
   getAll,
   deletePost,
   updatePost,
- }
+}
