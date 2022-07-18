@@ -3,6 +3,7 @@
 const PostDetails = (props) => {
   return (  
       <>
+        <h1>Hello, world!</h1>
         {/* Display post title */}
         {/* Display post author */}
         {/* Display post details */}

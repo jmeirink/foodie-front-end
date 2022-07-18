@@ -79,8 +79,14 @@ const App = () => {
         />
         <Route path="/" element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} />} 
         />
+
+        {/* ---------------------------- */}
+
         <Route path="/postdetails" element={<PostDetails user={user} posts={posts} />} 
         />
+        
+        {/* ---------------------------- */}
+
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
