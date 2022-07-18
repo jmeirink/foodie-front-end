@@ -40,6 +40,17 @@ const AddPost = (props) => {
         autoComplete="off" 
         className={styles.container}
       >
+        <label htmlFor="item-input" className="form-label">
+						Menu Item (required)
+					</label>
+					<input 
+						type="text"
+						id="item-input"
+						name="item"
+            value={formData.item}
+            onChange={handleChange}
+						required
+					/>
         <div className={styles.inputContainer}>
           <label htmlFor="review" className={styles.label}>Review</label>
           <textarea
@@ -51,7 +62,12 @@ const AddPost = (props) => {
             onChange={handleChange}
           />
           <label htmlFor="food-beverage-select">Food or beverage?</label>
-            <select name="mfoodBeverage" id="food-beverage-select">
+            <select 
+              id="food-beverage-select"
+              name="foodBeverage" 
+              value={formData.foodBeverage}
+              onChange={handleChange}
+            >
               <option value="Food">Food</option>
               <option value="Beverage">Beverage</option>
             </select>
