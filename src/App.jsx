@@ -12,6 +12,7 @@ import PostList from './pages/PostList/PostList'
 import RestaurantSearch from './pages/RestaurantSearch/RestaurantSearch'
 
 import EditPost from './pages/EditPost/EditPost'
+import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -89,6 +90,10 @@ const App = () => {
         <Route
           path="/profiles"
           element={user ? <Profiles /> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/profiles/:profileName"
+          element={user ? <ProfileDetails /> : <Navigate to="/login" />}
         />
         <Route
           path="/changePassword"
