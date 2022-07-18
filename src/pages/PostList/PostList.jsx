@@ -8,12 +8,15 @@ const PostList = (props) => {
         <AddPost handleAddPost={props.handleAddPost} />
         <h1>Posts</h1>
         {props.posts.map(post =>
-        <PostCard user={props.user} key={post._id} post={post} handleDeletePost={props.handleDeletePost} />
-        
+          <PostCard 
+            key={post._id} 
+            user={props.user} 
+            post={post} 
+            handleDeletePost={props.handleDeletePost} 
+          />
         )}
-        
-        </>
-)
+    </>
+  )
 }
- 
+
 export default PostList;
