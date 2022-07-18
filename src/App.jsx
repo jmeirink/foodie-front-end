@@ -10,6 +10,7 @@ import AddPost from './pages/AddPost/AddPost'
 import * as postService from './services/postService'
 import PostList from './pages/PostList/PostList'
 import RestaurantSearch from './pages/RestaurantSearch/RestaurantSearch'
+import PostDetails from './pages/PostDetails/PostDetails'
 
 import EditPost from './pages/EditPost/EditPost'
 
@@ -77,6 +78,8 @@ const App = () => {
         <Route path="/edit" element={<EditPost handleUpdatePost={handleUpdatePost}  />} 
         />
         <Route path="/" element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} />} 
+        />
+        <Route path="/postdetails" element={<PostDetails user={user} posts={posts} />} 
         />
         <Route
           path="/signup"
