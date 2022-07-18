@@ -67,34 +67,21 @@ const App = () => {
       <NavBar user={user} handleLogout={handleLogout} />
       <div className='content'>
       <Routes>
-        <Route path="/add" element={
-          <AddPost 
-            handleAddPost={handleAddPost}
-            RestaurantSearch={<RestaurantSearch />}
-          />} 
-        />
-        <Route path="/restaurants/new" element={user ? <RestaurantSearch /> : <Navigate to="/login" />}
-        />
-        <Route path="/edit" element={<EditPost handleUpdatePost={handleUpdatePost}  />} 
-        />
-        <Route path="/" element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} />} 
-        />
-        <Route
-          path="/signup"
-          element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
-        />
-        <Route
-          path="/login"
-          element={<Login handleSignupOrLogin={handleSignupOrLogin} />}
-        />
-        <Route
-          path="/profiles"
-          element={user ? <Profiles /> : <Navigate to="/login" />}
-        />
-        <Route
-          path="/profiles/:profileId"
-          element={user ? <ProfileDetails /> : <Navigate to="/login" />}
-        />
+        <Route path="/add" element={ <AddPost handleAddPost={handleAddPost} RestaurantSearch={<RestaurantSearch />}/>} />
+
+        <Route path="/restaurants/new" element={user ? <RestaurantSearch /> : <Navigate to="/login" />}/>
+
+        <Route path="/edit" element={<EditPost handleUpdatePost={handleUpdatePost}  />} />
+
+        <Route path="/" element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} handleAddPost={handleAddPost} />} />
+
+        <Route path="/signup" element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}/>
+
+        <Route path="/login" element={<Login handleSignupOrLogin={handleSignupOrLogin} />}/>
+
+        <Route path="/profiles" element={user ? <Profiles /> : <Navigate to="/login" />}/>
+
+        <Route path="/profiles/:profileName" element={user ? <ProfileDetails /> : <Navigate to="/login" />}/>
         <Route
           path="/changePassword"
           element={

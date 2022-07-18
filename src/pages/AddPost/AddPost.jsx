@@ -41,7 +41,10 @@ const AddPost = (props) => {
 
   return (
     <>
-      <h1>Add a Post</h1>
+    <main>
+        <div className="feed-header">
+          <h1>Home</h1>
+        </div>
 
       <form 
         onSubmit={handleSubmit} 
@@ -72,7 +75,7 @@ const AddPost = (props) => {
           </div>
         <div className={styles.inputContainer}>
           <label htmlFor="review" className={styles.label}>Review</label>
-          <textarea
+          <input
             type="text"
             autoComplete="off"
             id="review"
@@ -108,10 +111,8 @@ const AddPost = (props) => {
         <button disabled={isFormInvalid()} className={styles.button}>
           Add Post
         </button>
-
-
-
       </form>
+      </main>
     </>
   );
 }
