@@ -8,8 +8,8 @@ const PostDetails = (props) => {
 
   useEffect(() => {
     const fetchPostDetails = async () => {
-      const postData = await getPostDetails(postId)
-      setPostDetails(postData)
+      const postDetailsData = await getPostDetails(postId)
+      setPostDetails(postDetailsData)
     }
     fetchPostDetails()
   }, [postId])
