@@ -50,6 +50,11 @@ const AddPost = (props) => {
             name="review"
             onChange={handleChange}
           />
+          <label htmlFor="food-beverage-select">Food or beverage?</label>
+            <select name="mfoodBeverage" id="food-beverage-select">
+              <option value="Food">Food</option>
+              <option value="Beverage">Beverage</option>
+            </select>
         </div>
         <button disabled={isFormInvalid()} className={styles.button}>
           Add Post
