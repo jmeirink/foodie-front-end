@@ -19,7 +19,9 @@ const NavBar = ({ user, handleLogout }) => {
           </div>
 
           <div className='sidebarOption'>
+          <NavLink to="/profiles">
           <h2><span className="material-symbols-outlined">group</span>Friends</h2>
+          </NavLink>
           </div>
 
           <div className='sidebarOption'>
