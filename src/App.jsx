@@ -10,7 +10,6 @@ import AddPost from './pages/AddPost/AddPost'
 import * as postService from './services/postService'
 import PostList from './pages/PostList/PostList'
 import RestaurantSearch from './pages/RestaurantSearch/RestaurantSearch'
-
 import EditPost from './pages/EditPost/EditPost'
 import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
 
@@ -66,6 +65,7 @@ const App = () => {
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
+      <div className='content'>
       <Routes>
         <Route path="/add" element={
           <AddPost 
@@ -106,6 +106,7 @@ const App = () => {
           }
         />
       </Routes>
+      </div>
     </>
   )
 }
