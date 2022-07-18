@@ -33,16 +33,19 @@ const AddPost = (props) => {
 
   return (
     <>
-      <h1>Add a Post</h1>
+    <main>
+        <div className="feed-header">
+          <h1>Home</h1>
+        </div>
 
-      <form 
-        onSubmit={handleSubmit} 
-        autoComplete="off" 
-        className={styles.container}
-      >
-        <div className={styles.inputContainer}>
+        <form 
+            onSubmit={handleSubmit} 
+            autoComplete="off" 
+            className={styles.container}
+          >
+          <div className='postbox-input'>
           <label htmlFor="review" className={styles.label}>Review</label>
-          <textarea
+          <input
             type="text"
             autoComplete="off"
             id="review"
@@ -51,13 +54,9 @@ const AddPost = (props) => {
             onChange={handleChange}
           />
         </div>
-        <button disabled={isFormInvalid()} className={styles.button}>
-          Add Post
-        </button>
-
-
-
-      </form>
+        <button disabled={isFormInvalid()} className={styles.button}>Add Post</button>
+        </form>
+    </main>
     </>
   );
 }
