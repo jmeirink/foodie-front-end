@@ -42,8 +42,11 @@
   .content {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    /* width: 70vw; */
+    flex: 0.5;
     justify-items: center;
+    min-width: fit-content;
+    overflow-y: scroll;
   }
 
   h1 {

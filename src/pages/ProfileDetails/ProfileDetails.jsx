@@ -1,7 +1,23 @@
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { getProfileDetails } from "../../services/profileService"
 
-const ProfileDetails = (props) => {
+const ProfileDetails = () => {
+  const [profileDetails, setProfileDetails] = useState({})
+  const { profileId } = useParams()
+
+  useEffect(() => {
+    const fetchProfileDetails = async () => {
+      const profileData = await getProfileDetails(profileId)
+      setProfileDetails(profileData)
+    }
+    fetchProfileDetails()
+  }, [profileId])
+
   return(
-    <h1>This is the Profile Details Component</h1>
+    
+    <h1>{profileDetails.name}</h1>
+    
   )
 }
 
