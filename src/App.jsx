@@ -12,6 +12,7 @@ import PostList from './pages/PostList/PostList'
 import RestaurantSearch from './pages/RestaurantSearch/RestaurantSearch'
 import EditPost from './pages/EditPost/EditPost'
 import ProfileDetails from './pages/ProfileDetails/ProfileDetails'
+import PostDetails from './pages/PostDetails/PostDetails'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
