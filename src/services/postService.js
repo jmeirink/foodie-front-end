@@ -52,11 +52,21 @@ async function addPhoto(photoData, postId) {
 	return await res.json()
 }
 
+async function getPostDetails(postId) {
+  const res = await fetch(`${BASE_URL}/${postId}`, {
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`
+    }
+  })
+  return await res.json()
+}
+
 
 export { 
   create,
   getAll,
   deletePost,
   updatePost,
-  addPhoto
+  addPhoto,
+  getPostDetails
 }

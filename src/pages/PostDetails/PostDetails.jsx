@@ -1,19 +1,22 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { getPostDetails } from "../../services/postService";
 
 const PostDetails = (props) => {
+  const [postDetails, setPostDetails] = useState({})
+  const { postId } = useParams()
+
+  useEffect(() => {
+    const fetchPostDetails = async () => {
+      const postData = await getPostDetails(postId)
+      setPostDetails(postData)
+    }
+    fetchPostDetails()
+  }, [postId])
+  
   return (  
       <>
-        <h1>Post Details</h1>
-        
-          <div>
-            <h2>Post details component</h2>
-            <h2>Post details component</h2>
-          </div>
-        
-        {/* Display post author */}
-        {/* Display post details */}
-        {/* Display a comments section */}
-        {/* Display an add and delete button below each comment */}
+        <h1>{postDetails.review}</h1>
       </>
   )
 }
