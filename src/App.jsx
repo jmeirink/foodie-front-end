@@ -92,7 +92,7 @@ const App = () => {
           element={user ? <Profiles /> : <Navigate to="/login" />}
         />
         <Route
-          path="/profiles/:profileName"
+          path="/profiles/:profileId"
           element={user ? <ProfileDetails /> : <Navigate to="/login" />}
         />
         <Route
