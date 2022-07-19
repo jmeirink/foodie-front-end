@@ -1,8 +1,8 @@
 const CommentCard = (props) => {
   return(
     <>
-      <h1>{props.comment.comment}</h1>
-      <h2>{props.comment.author}</h2>
+      <h3>Hear what {props.comment.author} has to say!</h3>
+      <p>{props.comment.comment}</p>
     </>
   )
 }
