@@ -8,10 +8,13 @@ const CommentSection = (props) => {
 
   return(
     <div>
-      <AddComment postDetails={props.postDetails} setPostDetails={props.setPostDetails} />
+    <div>
+      <h1>Comments</h1>
+    </div>
     {props.postDetails?.comments.map(comment => (
       <CommentCard key={comment._id} comment={comment}/>
     ))}
+    <AddComment postDetails={props.postDetails} setPostDetails={props.setPostDetails} />
     </div>
   )
 }

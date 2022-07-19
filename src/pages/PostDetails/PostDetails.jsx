@@ -23,9 +23,11 @@ const PostDetails = (props) => {
   
   return (  
       <>
-        <h1>{postDetails?.review}</h1>
-        <h3>{postDetails?.foodBeverage}</h3>
-        <h3>{postDetails?.item?.itemTitle}</h3>
+        <h1>Post by {postDetails?.author.name}</h1>
+        <h3>Item: {postDetails?.item?.itemTitle}</h3>
+        <img src={postDetails?.photo} alt="" />
+        <h3>Item Type: {postDetails?.foodBeverage}</h3>
+        <h3>Review: {postDetails?.review}</h3>
         <CommentSection postDetails={postDetails} setPostDetails={setPostDetails}/>
       </>
   )
