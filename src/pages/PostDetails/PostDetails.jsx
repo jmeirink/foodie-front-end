@@ -17,6 +17,8 @@ const PostDetails = (props) => {
   return (  
       <>
         <h1>{postDetails.review}</h1>
+        <h3>{postDetails.foodBeverage}</h3>
+        <h3>{postDetails.item.itemTitle}</h3>
       </>
   )
 }
