@@ -1,10 +1,12 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import styles from './AddComment.css'
+import { addComment } from "../../services/postService"
+
 
 
 const AddComment = (props) =>  {
-  const navigate = useNavigate()
+  const { postDetails, setPostDetails } = props
   const [formData, setFormData] = useState({
     comment: ''
   })
@@ -19,8 +21,9 @@ const AddComment = (props) =>  {
   const handleCommentSubmit = async e => {
     e.preventDefault()
     try {
-      // handleAddComment(formData)
-      navigate('/')
+      const updatedPost = await addComment(postDetails._id,
+        formData)
+        setPostDetails(updatedPost)
     } catch (err) {
       console.log(err)
     }
