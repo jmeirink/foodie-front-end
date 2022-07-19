@@ -26,6 +26,7 @@ const AddPost = (props) => {
   }
 
   const handleSubmit = async e => {
+    e.preventDefault()
     try {
       props.handleAddPost(formData, photoData.photo)
       navigate('/')
@@ -107,12 +108,12 @@ const AddPost = (props) => {
 						onChange={handleChangePhoto}
 					/>
 				</div>
-      <RestaurantSearch handleChange={handleChange}/>
 
         <button disabled={isFormInvalid()} className={styles.button}>
           Add Post
         </button>
       </form>
+      <RestaurantSearch handleChange={handleChange}/>
       </main>
     </>
   );
