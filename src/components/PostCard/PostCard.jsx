@@ -7,8 +7,9 @@ const PostCard  = ({post, user, handleDeletePost}) => {
         <div className="card">
             <Link to={`/posts/${post._id}`} state={{post}}>
                 <div className="card-body">
-                    <p>{post.author?.name}</p>
-                    <h2 className="card-text">{post.review}</h2>
+                    <h2>{post.item?.itemTitle}</h2>
+                    <h4 className="card-text">From: {post.restaurant?.title}</h4>
+                    <p>Posted by: {post.author?.name}</p>
                 </div>
             </Link>
             {user?.profile === post.author._id &&
