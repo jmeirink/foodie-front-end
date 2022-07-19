@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { getPostDetails } from "../../services/postService";
-import CommentCard from "../../components/CommentCard/CommentCard";
-import AddComment from "../AddComment/AddComment";
+import CommentSection from "../../components/CommentSection/CommentSection";
 
 const PostDetails = (props) => {
   const [postDetails, setPostDetails] = useState() // <=====
   const location = useLocation()
+  
 
   console.log('LOCATION', location)
 
@@ -23,11 +23,10 @@ const PostDetails = (props) => {
   
   return (  
       <>
-        <h1>{postDetails.review}</h1>
-        <h3>{postDetails.foodBeverage}</h3>
-        <h3>{postDetails.item.itemTitle}</h3>
-        <AddComment />
-        <CommentCard />
+        <h1>{postDetails?.review}</h1>
+        <h3>{postDetails?.foodBeverage}</h3>
+        <h3>{postDetails?.item?.itemTitle}</h3>
+        <CommentSection postDetails={postDetails} setPostDetails={setPostDetails}/>
       </>
   )
 }
