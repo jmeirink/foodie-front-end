@@ -32,18 +32,22 @@ const EditPost = (props) => {
     return (
         <>
             <h1>Edit Post</h1>
+
+            <h2>{formData.item.itemTitle}</h2>
+            <h4>From: {formData.restaurant.title}</h4>
+            <h4>Reviewed by {formData.author.name}</h4>
             <form onSubmit={handleSubmit} autoComplete="off" className={styles.container}>
             <div className={styles.inputContainer}>
             <label htmlFor="review" className={styles.label}>Review</label>
             <textarea
-                type="text"
-                autoComplete="off"
-                id="review"
-                value={review}
-                name="review"
-                onChange={handleChange}
-        />
-    </div>
+              type="text"
+              autoComplete="off"
+              id="review"
+              value={review}
+              name="review"
+              onChange={handleChange}
+            />
+            </div>
     <button disabled={isFormInvalid()} className={styles.button}>
     Edit Post
     </button>
