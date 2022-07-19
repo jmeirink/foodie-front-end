@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { getPostDetails } from "../../services/postService";
 import CommentSection from "../../components/CommentSection/CommentSection";
+import styles from './PostDetails.module.css'
 
 const PostDetails = (props) => {
   const [postDetails, setPostDetails] = useState() // <=====

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from './SearchForm.css'
 
 const SearchForm = (props) => {
   const [formData, setFormData] = useState({

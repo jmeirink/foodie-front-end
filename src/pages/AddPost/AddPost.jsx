@@ -107,12 +107,13 @@ const AddPost = (props) => {
 						onChange={handleChangePhoto}
 					/>
 				</div>
+      <RestaurantSearch handleChange={handleChange}/>
+
         <button disabled={isFormInvalid()} className={styles.button}>
           Add Post
         </button>
       </form>
       </main>
-      <RestaurantSearch handleChange={handleChange}/>
     </>
   );
 }

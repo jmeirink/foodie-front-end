@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 import { getProfileDetails } from "../../services/profileService"
+import styles from './ProfileDetails.module.css'
+
 
 const ProfileDetails = (props) => {
   const location = useLocation()

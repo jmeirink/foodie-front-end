@@ -1,7 +1,18 @@
 .container {
     width: 90%;
-    display: grid;
+    /* display: grid; */
     grid-template-rows: repeat(minmax(170px, 1fr));
       grid-template-columns: auto auto;
     grid-gap: 20px;
+  }
+  
+
+  h1 {
+    text-align: center;
+  }
+
+  .card {
+    width: 40vw;
+    margin-left: 20vw;
+    margin-top: 5vh;
   }
