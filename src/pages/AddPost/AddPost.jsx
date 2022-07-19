@@ -50,7 +50,6 @@ const AddPost = (props) => {
       <form 
         onSubmit={handleSubmit} 
         autoComplete="off" 
-        className={styles.container}
       >
         <div className={styles.inputContainer}>
           <label htmlFor="item-input" className="form-label">
