@@ -65,7 +65,7 @@ async function addComment(postId, formData) {
   console.log(formData)
   const res = await fetch(`${BASE_URL}/${postId}/comments`, {
     method: 'POST',
-    header: {
+    headers: {
       'Authorization': `Bearer ${tokenService.getToken()}`,
       'Content-Type' : 'application/json'
     },

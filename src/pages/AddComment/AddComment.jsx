@@ -4,6 +4,7 @@ import styles from './AddComment.css'
 import { addComment } from "../../services/postService"
 
 
+
 const AddComment = (props) =>  {
   const { postDetails, setPostDetails } = props
   const [formData, setFormData] = useState({
@@ -20,12 +21,9 @@ const AddComment = (props) =>  {
   const handleCommentSubmit = async e => {
     e.preventDefault()
     try {
-      console.log(postDetails._id)
       const updatedPost = await addComment(postDetails._id,
         formData)
         setPostDetails(updatedPost)
-      // <--Service function here
-      // updatedPost with response set post details
     } catch (err) {
       console.log(err)
     }
