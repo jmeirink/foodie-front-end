@@ -5,7 +5,7 @@ const PostCard  = ({post, user, handleDeletePost}) => {
     return (  
         <>
         <div className="card">
-            <Link to={`/posts/${post._id}`}>
+            <Link to={`/posts/${post._id}`} state={{post}}>
                 <div className="card-body">
                     <p>{post.author?.name}</p>
                     <h2 className="card-text">{post.review}</h2>
