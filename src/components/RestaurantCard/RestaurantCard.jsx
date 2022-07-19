@@ -1,3 +1,4 @@
+import styles from './RestaurantCard.css'
 
 const RestaurantCard = (props) => {
   return ( 

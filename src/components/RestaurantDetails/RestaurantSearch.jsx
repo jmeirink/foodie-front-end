@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { searchRestaurant } from '../../services/foodService';
+import styles from './RestaurantSearch.css'
 
 const RestaurantDetails = () => {
   const [restaurantDetails, setRestaurantDetails] = useState({})

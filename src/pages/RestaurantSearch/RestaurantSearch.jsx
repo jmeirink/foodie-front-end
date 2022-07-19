@@ -2,6 +2,7 @@ import { useState } from 'react'
 import SearchForm from '../../components/SearchForm/SearchForm';
 import { searchRestaurant } from '../../services/foodService';
 import RestaurantCard from '../../components/RestaurantCard/RestaurantCard';
+import styles from './RestaurantSearch.module.css'
 
 const RestaurantSearch = (props) => {
   const [restaurants, setRestaurants] = useState([])

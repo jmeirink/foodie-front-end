@@ -1,10 +1,11 @@
 import PostCard from "../../components/PostCard/PostCard";
-import styles from "../../../src/App.css"
 import AddPost from "../AddPost/AddPost";
+import styles from './PostList.module.css'
 
 const PostList = (props) => {
     return (  
       <>
+        <div className="container">
         <AddPost handleAddPost={props.handleAddPost} />
         <h1>Posts</h1>
         {props.posts.map(post =>
@@ -15,6 +16,7 @@ const PostList = (props) => {
             handleDeletePost={props.handleDeletePost}
           />
         )}
+        </div>
       </>
   )
 }

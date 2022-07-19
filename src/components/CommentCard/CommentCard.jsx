@@ -1,3 +1,5 @@
+import styles from './CommentCard.module.css'
+
 const CommentCard = (props) => {
   return(
     <>

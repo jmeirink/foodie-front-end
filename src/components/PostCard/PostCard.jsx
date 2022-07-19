@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import styles from './PostCard.css'
 
 const PostCard  = ({post, user, handleDeletePost}) => {
 

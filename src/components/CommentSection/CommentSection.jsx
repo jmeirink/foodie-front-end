@@ -1,6 +1,7 @@
 import CommentCard from "../CommentCard/CommentCard"
 import AddComment from "../../pages/AddComment/AddComment"
 import PostDetails from "../../pages/PostDetails/PostDetails"
+import styles from './CommentSection.module.css'
 
 
 const CommentSection = (props) => {
