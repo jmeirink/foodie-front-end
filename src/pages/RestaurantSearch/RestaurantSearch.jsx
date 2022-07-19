@@ -3,7 +3,7 @@ import SearchForm from '../../components/SearchForm/SearchForm';
 import { searchRestaurant } from '../../services/foodService';
 import RestaurantCard from '../../components/RestaurantCard/RestaurantCard';
 
-const RestaurantSearch = () => {
+const RestaurantSearch = (props) => {
   const [restaurants, setRestaurants] = useState([])
   
 	const handleRestaurantSearch = async (formData) => {
@@ -17,7 +17,8 @@ const RestaurantSearch = () => {
       <SearchForm handleRestaurantSearch={handleRestaurantSearch} />
       {restaurants.length ? 
         <>
-          <select name="" id="">
+          <select name="title" id="restaurant-select" onChange={props.handleChange}>
+            <option>Select Restaurant....</option>
             {restaurants.map(restaurant => 
               <RestaurantCard 
                 key={restaurant.id}

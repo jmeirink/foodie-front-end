@@ -10,7 +10,7 @@ const AddPost = (props) => {
     foodBeverage: 'Food',
     itemTitle: '',
     itemPrice: '',
-    title: '',
+    title: 'None',
   })
   const [photoData, setPhotoData] = useState({})
 
@@ -114,7 +114,7 @@ const AddPost = (props) => {
         </button>
       </form>
       </main>
-      <RestaurantSearch />
+      <RestaurantSearch handleChange={handleChange}/>
     </>
   );
 }
