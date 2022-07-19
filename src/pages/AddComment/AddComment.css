@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.label,
+.button {
+  margin-right: .5rem;
+}
+
+.inputContainer {
+  margin-bottom: 1rem;
+}
+
+main {
+  flex: 0.5;
+  border-right: 1px solid black;
+  min-width: fit-content;
+  overflow-y: scroll;
+  background-color: blue;
+}
+
