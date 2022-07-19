@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { getPostDetails } from "../../services/postService";
+import CommentCard from "../../components/CommentCard/CommentCard";
+import AddComment from "../AddComment/AddComment";
 
 const PostDetails = (props) => {
   const [postDetails, setPostDetails] = useState() // <=====
@@ -24,6 +26,8 @@ const PostDetails = (props) => {
         <h1>{postDetails.review}</h1>
         <h3>{postDetails.foodBeverage}</h3>
         <h3>{postDetails.item.itemTitle}</h3>
+        <AddComment />
+        <CommentCard />
       </>
   )
 }
