@@ -17,12 +17,14 @@ const RestaurantSearch = () => {
       <SearchForm handleRestaurantSearch={handleRestaurantSearch} />
       {restaurants.length ? 
         <>
-          {restaurants.map(restaurant => 
-            <RestaurantCard 
-              key={restaurant.id}
-              restaurant={restaurant}
-            />
-          )}
+          <select name="" id="">
+            {restaurants.map(restaurant => 
+              <RestaurantCard 
+                key={restaurant.id}
+                restaurant={restaurant}
+              />
+            )}
+          </select>
         </>
         :
         <h3>Please search for a Restaurant!</h3>
