@@ -47,6 +47,7 @@
     justify-items: center;
     min-width: fit-content;
     overflow-y: scroll;
+    background-color: gray;
   }
 
   h1 {
