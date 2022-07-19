@@ -16,11 +16,16 @@
   }
 
   main {
-    flex: 0.5;
+    /* flex: 0.5; */
     border-right: 1px solid black;
     min-width: fit-content;
     /* overflow-y: scroll; */
-    background-color: blue;
+    background-color: rgb(109, 109, 176);
+    padding: 20px;
+    border-radius: 30px;
   }
 
+  #review {
+    background-color: black;
+  }
 

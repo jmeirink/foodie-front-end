@@ -43,7 +43,7 @@ const AddPost = (props) => {
     <>
     <main>
         <div className="feed-header">
-          <h1>Home</h1>
+          <h1>Post</h1>
         </div>
 
       <form 
