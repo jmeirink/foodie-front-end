@@ -17,7 +17,9 @@ const NavBar = ({ user, handleLogout }) => {
           </div>
 
           <div className='sidebarOption'>
-          <h2><span className="material-symbols-outlined">person</span>Profile</h2>
+          <NavLink to="/changePassword">
+          <h2><span className="material-symbols-outlined">person</span>Profile Settings</h2>
+          </NavLink>
           </div>
 
           <div className='sidebarOption'>
@@ -29,12 +31,6 @@ const NavBar = ({ user, handleLogout }) => {
           <div className='sidebarOption'>
           <NavLink to="/restaurants/new">
           <h2><span className="material-symbols-outlined">restaurant</span>Restaurants</h2>
-          </NavLink>
-          </div>
-
-          <div className='sidebarOption'>
-          <NavLink to="/changePassword">
-          <h2><span className="material-symbols-outlined">settings</span>Settings</h2>
           </NavLink>
           </div>
 
