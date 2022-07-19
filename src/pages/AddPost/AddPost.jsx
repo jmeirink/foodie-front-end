@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from './AddPost.module.css'
+import RestaurantSearch from "../RestaurantSearch/RestaurantSearch";
 
 const AddPost = (props) => {
   const navigate = useNavigate()
@@ -8,7 +9,8 @@ const AddPost = (props) => {
     review: '',
     foodBeverage: 'Food',
     itemTitle: '',
-    itemPrice: ''
+    itemPrice: '',
+    title: '',
   })
   const [photoData, setPhotoData] = useState({})
 
@@ -112,6 +114,7 @@ const AddPost = (props) => {
         </button>
       </form>
       </main>
+      <RestaurantSearch />
     </>
   );
 }
