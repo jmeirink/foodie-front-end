@@ -9,7 +9,7 @@ const ChangeProfile = props => {
     name: '',
     bio: '',
   })
-  const profile = props.profile 
+  const profileId = props.profile 
 
   const handleProfileChange = e => {
     setFormData({
@@ -21,7 +21,7 @@ const ChangeProfile = props => {
   const handleProfileSubmit = async e => {
     e.preventDefault()
     try {
-      await profileService.changeProfile(formData)
+      await profileService.changeProfile(formData, profileId)
       navigate('/')
     } catch (err) {
       props.updateMessage(err.message)

@@ -28,7 +28,7 @@ async function addPhoto(photoData, profileId) {
 }
 
 async function changeProfile(formData, profileId) {
-  console.log(profileId, formData)
+  console.log(profileId)
   const res = await fetch(`${BASE_URL}/${profileId}/update`,
   {
     method: 'PUT',
