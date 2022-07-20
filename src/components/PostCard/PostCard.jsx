@@ -6,19 +6,40 @@ const PostCard  = ({post, user, handleDeletePost}) => {
     return (  
         <>
         <div className="card">
-            <Link to={`/posts/${post._id}`} state={{post}}>
+            <Link className='text-link' to={`/posts/${post._id}`} state={{post}}>
                 <div className="card-body">
-                    <h2>{post.item?.itemTitle}</h2>
-                    <h4 className="card-text">From: {post.restaurant?.title}</h4>
-                    <p>Posted by: {post.author?.name}</p>
+                    <h5>{post.author?.name} had a {post.item?.itemTitle} at {post.restaurant?.title} </h5>
+                    <h3> {post.review}</h3>
+                    <img src={post?.photo} alt="" />
                 </div>
             </Link>
-            {user?.profile === post.author._id &&
+
             <div className="post-footer">
-                <button onClick={()=> handleDeletePost(post._id)}>Delete</button>
-                <Link to='/edit' state={{post}} >Edit</Link>
-            </div>
+
+            {user?.profile === post.author._id &&
+
+                <div>
+                <button className="delete btn" onClick={()=> handleDeletePost(post._id)}>
+                    <span className="material-symbols-outlined">delete</span>
+                </button>
+
+                <button className="edit btn">
+                <Link className='text-link' to='/edit' state={{post}} >
+                    <span className="material-symbols-outlined">edit</span>
+                </Link>
+                </button>
+                </div>
             }
+
+                <button className="more btn">
+                <span class="material-symbols-outlined">chat</span>
+                </button>
+
+                <button className="like btn">
+                <span className="material-symbols-outlined">favorite</span>
+                </button>
+
+            </div>
         </div>
         </>
     )
