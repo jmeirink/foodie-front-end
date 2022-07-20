@@ -23,11 +23,11 @@ const ChangePassword = props => {
   return (
     <main className={styles.container}>
       <h1>Hello {profileDetails.name}</h1>
-      <h2>"{profileDetails.bio}"</h2>
       <img src={profileDetails?.profilePhoto} alt="" />
+      <h2>"{profileDetails.bio}"</h2>
       <h1>Profile Settings</h1>
       <ChangeProfile profile={props.profile}/>
-      <h1>Change Password</h1>
+      <h3>Change Password</h3>
       <p>{message}</p>
       <ChangePasswordForm {...props} updateMessage={updateMessage} />
     </main>
