@@ -28,13 +28,14 @@ async function addPhoto(photoData, profileId) {
 }
 
 async function changeProfile(formData, profileId) {
-  console.log(profileId)
+  console.log(formData)
   const res = await fetch(`${BASE_URL}/${profileId}/update`,
   {
     method: 'PUT',
     headers: {
-      'Authorization': `Bearer ${tokenService.getToken()}`
-    },
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type': 'application/json'
+  },
     body: JSON.stringify(formData)
   })
   return await res.json()
