@@ -55,8 +55,11 @@ const App = () => {
     
   }
 
-  const handleUpdatePost = async (postData) => {
+  const handleUpdatePost = async (postData, photo) => {
     const updatedPost = await postService.updatePost(postData)
+    if (photo) {
+      updatedPost.photo = await postPhotoHelper(photo, updatedPost._id)
+    }
     // map state to new array
     const newPostsArray = posts.map(post => post._id === updatedPost._id ? updatedPost : post)
     // use new array to set new state
