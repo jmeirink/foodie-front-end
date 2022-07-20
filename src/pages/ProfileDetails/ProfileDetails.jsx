@@ -37,7 +37,7 @@ const ProfileDetails = (props) => {
         {profileDetails.profilePhoto ? 
           <img src={profileDetails.profilePhoto} alt=""/>
         :
-          <img src="/Burger.jpg" alt=""/>
+          <img src="/BurgerLogo.jpg" alt=""/>
         }
       </div>
 
