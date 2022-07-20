@@ -4,7 +4,9 @@ import styles from './CommentCard.module.css'
 
 const CommentCard = (props) => {
   const [profileDetails, setProfileDetails] = useState({})
-  console.log(props.post);
+  console.log('This is the comment id', props.comment._id)
+  const postId = props.postDetails._id
+  const commentId = props.comment._id
 
   useEffect(() => {
     const fetchProfileDetails = async () => {
@@ -22,7 +24,7 @@ const CommentCard = (props) => {
 
         {profileDetails.name === props.comment.author &&
           // <button>Delete</button>
-          <button onClick={()=> props.handleDeleteComment(props.comment._id)}>Delete</button>
+          <button onClick={()=> props.handleDeleteComment(postId, commentId)}>Delete</button>
         }
       </div>
 
