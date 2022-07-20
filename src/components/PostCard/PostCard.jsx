@@ -21,7 +21,6 @@ function MyButton() {
 // count like ends
 
 const PostCard  = ({post, user, handleDeletePost}) => {
-
     return (  
         <>
         <div className="card">

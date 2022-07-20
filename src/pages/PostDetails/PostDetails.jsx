@@ -1,19 +1,24 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { getPostDetails } from "../../services/postService";
-import CommentSection from "../../components/CommentSection/CommentSection";
+import { useState, useEffect } from "react"
+import { Link, useLocation, useNavigate } from "react-router-dom"
+import * as postService from '../../services/postService'
+import CommentSection from "../../components/CommentSection/CommentSection"
 import styles from './PostDetails.module.css'
 
 const PostDetails = (props) => {
   const [postDetails, setPostDetails] = useState() // <=====
   const location = useLocation()
-  
-  
+  const navigate = useNavigate()
+
+  const handleDeleteComment = async (postId, commentId) => {
+    const updatedComments = await postService.deleteComment(postId, commentId)
+    setPostDetails(updatedComments)
+  }
+
   console.log('LOCATION', location)
   
   useEffect(() => {
     const fetchPostDetails = async () => {
-      const postDetailsData = await getPostDetails(location.state.post._id)
+      const postDetailsData = await postService.getPostDetails(location.state.post._id)
       console.log('POST DETAILS:', postDetailsData)
       setPostDetails(postDetailsData)
     }
@@ -35,7 +40,7 @@ const PostDetails = (props) => {
         </Link>
       </div>
 
-        <CommentSection postDetails={postDetails} setPostDetails={setPostDetails}/>
+        <CommentSection postDetails={postDetails} setPostDetails={setPostDetails} handleDeleteComment={handleDeleteComment} profile={props.user.profile} />
       </>
   )
 }
