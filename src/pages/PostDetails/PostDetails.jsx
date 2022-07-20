@@ -9,9 +9,9 @@ const PostDetails = (props) => {
   const location = useLocation()
   const navigate = useNavigate()
 
-  const handleDeleteComment = async commentId => {
-    postService.deleteComment(commentId)
-    navigate('/')
+  const handleDeleteComment = async (postId, commentId) => {
+    postService.deleteComment(postId, commentId)
+    // navigate('/')
   }
 
   console.log('LOCATION', location)
