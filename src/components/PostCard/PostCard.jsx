@@ -1,5 +1,24 @@
 import { Link } from "react-router-dom";
 import styles from './PostCard.css'
+import { useState } from "react";
+
+
+// count like 
+function MyButton() {
+    const [count, setCount] = useState(0);
+  
+    function handleClick() {
+      setCount(count + 1);
+    }
+  
+    return (
+      <button className=" like btn" onClick={handleClick}>
+        {count} <span className="material-symbols-outlined">favorite</span>
+      </button>
+    );
+  }
+
+// count like ends
 
 const PostCard  = ({post, user, handleDeletePost}) => {
 
@@ -7,6 +26,7 @@ const PostCard  = ({post, user, handleDeletePost}) => {
         <>
         <div className="card">
             <Link className='text-link' to={`/posts/${post._id}`} state={{post}}>
+               
                 <div className="card-body">
                     <h5>{post.author?.name} had a {post.item?.itemTitle} at {post.restaurant?.title} </h5>
                     <h3> {post.review}</h3>
@@ -31,12 +51,13 @@ const PostCard  = ({post, user, handleDeletePost}) => {
                 </div>
             }
 
-                <button className="comments btn">
+                <button className="comments btn" title="comments">
                 <span class="material-symbols-outlined">chat</span>
                 </button>
 
-                <button className="like btn">
+                <button className="like btn" title="like">
                 <span className="material-symbols-outlined">favorite</span>
+                <MyButton />
                 </button>
 
             </div>
