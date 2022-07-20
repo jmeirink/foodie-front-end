@@ -55,11 +55,8 @@ const PostCard  = ({post, user, handleDeletePost}) => {
                 <span className="material-symbols-outlined">chat</span>
                 </button>
 
-                <button className="like btn" title="like">
-                <span className="material-symbols-outlined">favorite</span>
                 <MyButton />
-                </button>
-
+                
             </div>
         </div>
         </>
