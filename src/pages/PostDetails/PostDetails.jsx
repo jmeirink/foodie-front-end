@@ -36,9 +36,7 @@ const PostDetails = (props) => {
 
         <div className="post-footer">
           <button className="edit btn">
-                <Link className='text-link' to='/edit' state={{profile}} >
-                    <span className="material-symbols-outlined">edit</span>
-                </Link>
+                
                 </button>
 
         </div>

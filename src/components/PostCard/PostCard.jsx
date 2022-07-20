@@ -52,7 +52,7 @@ const PostCard  = ({post, user, handleDeletePost}) => {
             }
 
                 <button className="comments btn" title="comments">
-                <span class="material-symbols-outlined">chat</span>
+                <span className="material-symbols-outlined">chat</span>
                 </button>
 
                 <button className="like btn" title="like">
