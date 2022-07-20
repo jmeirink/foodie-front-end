@@ -31,7 +31,7 @@ const PostCard  = ({post, user, handleDeletePost}) => {
                 </div>
             }
 
-                <button className="more btn">
+                <button className="comments btn">
                 <span class="material-symbols-outlined">chat</span>
                 </button>
 

@@ -26,3 +26,18 @@
     text-decoration: none;
 }
 
+.delete:hover {
+    color: red;
+}
+
+.like:hover {
+    color: rgb(220, 39, 199);
+}
+
+.edit:hover {
+    color: green;
+}
+
+.comments:hover {
+    color: blue;
+}
