@@ -5,6 +5,7 @@ import styles from './ChangePassword.module.css'
 
 const ChangePassword = props => {
   const [message, setMessage] = useState([''])
+  
 
   const updateMessage = msg => {
     setMessage(msg)

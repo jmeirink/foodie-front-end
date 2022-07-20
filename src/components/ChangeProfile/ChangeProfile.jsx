@@ -9,6 +9,7 @@ const ChangeProfile = props => {
     name: '',
     bio: '',
   })
+  const profile = props.profile 
 
   const handleProfileChange = e => {
     setFormData({
