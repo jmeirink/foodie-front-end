@@ -38,14 +38,6 @@ const PostDetails = (props) => {
           <img src={postDetails?.photo} alt="" />
         </div>
         </Link>
-
-        <div className="post-footer">
-          <button className="edit btn">
-                
-                </button>
-
-        </div>
-        
       </div>
 
         <CommentSection postDetails={postDetails} setPostDetails={setPostDetails} handleDeleteComment={handleDeleteComment} profile={props.user.profile} />
