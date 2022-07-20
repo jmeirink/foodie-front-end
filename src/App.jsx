@@ -60,7 +60,6 @@ const App = () => {
     if (photo) {
       updatedPost.photo = await postPhotoHelper(photo, updatedPost._id)
     }
-
     // map state to new array
     const newPostsArray = posts.map(post => post._id === updatedPost._id ? updatedPost : post)
     // use new array to set new state

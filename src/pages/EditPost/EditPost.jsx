@@ -72,4 +72,4 @@ const EditPost = (props) => {
   );
 }
 
-export default EditPost ;
+export default EditPost;
