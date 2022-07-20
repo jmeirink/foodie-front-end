@@ -12,7 +12,7 @@ const CommentSection = (props) => {
           <h1>Comments</h1>
         </div>
         {props.postDetails?.comments.map(comment => (
-          <CommentCard key={comment._id} comment={comment} profile={props.profile} setPostDetails={props.setPostDetails}/>
+          <CommentCard key={comment._id} comment={comment} profile={props.profile} setPostDetails={props.setPostDetails} handleDeleteComment={props.handleDeleteComment}/>
         ))}
         <AddComment postDetails={props.postDetails} setPostDetails={props.setPostDetails} />
       </div>

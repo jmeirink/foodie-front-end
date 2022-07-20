@@ -21,8 +21,8 @@ const CommentCard = (props) => {
         <p>{props.comment.comment}</p>
 
         {profileDetails.name === props.comment.author &&
-          <button>Delete</button>
-          // <button onClick={()=> setPostDetails()}>Delete</button>
+          // <button>Delete</button>
+          <button onClick={()=> props.handleDeleteComment(props.comment._id)}>Delete</button>
         }
       </div>
 
