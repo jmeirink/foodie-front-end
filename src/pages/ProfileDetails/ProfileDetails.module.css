@@ -1,9 +1,13 @@
+
 img:first-child {
     width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 3px solid black;
 
 }
+
+
 
 div > h2 {
     background-color: white;
