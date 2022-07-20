@@ -25,11 +25,24 @@ const PostDetails = (props) => {
   
   return (  
       <>
-        <h1>Post by <Link to={`/profiles/${profile.name}`} state={{profile}}>{postDetails?.author.name}</Link></h1>
-        <h3>Item: {postDetails?.item?.itemTitle}</h3>
-        <img src={postDetails?.photo} alt="" />
-        <h3>Item Type: {postDetails?.foodBeverage}</h3>
-        <h3>Review: {postDetails?.review}</h3>
+      <div className="card">
+      <Link className="text-link" to={`/profiles/${profile.name}`} state={{profile}}>
+        <div className="card-body">
+          <h5>{postDetails?.author.name} had a {postDetails?.item?.itemTitle} at {postDetails?.restaurant?.title}</h5>
+          <h3>{postDetails?.review}</h3>
+          <img src={postDetails?.photo} alt="" />
+        </div>
+        </Link>
+
+        <div className="post-footer">
+          <button className="edit btn">
+                
+                </button>
+
+        </div>
+        
+      </div>
+
         <CommentSection postDetails={postDetails} setPostDetails={setPostDetails}/>
       </>
   )

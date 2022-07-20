@@ -38,7 +38,7 @@ const EditPost = (props) => {
     <>
       <h1>Edit Post</h1>
       <h2>{formData.item.itemTitle}</h2>
-      <h4>From: {formData.restaurant.title}</h4>
+      <h4>From: {formData.restaurant?.title}</h4>
       <h4>Reviewed by {formData.author.name}</h4>
       <form onSubmit={handleSubmit} autoComplete="off" className={styles.container}>
         <div className={styles.inputContainer}>
