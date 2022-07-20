@@ -4,7 +4,7 @@ import ProfileCard from '../../components/ProfileCard/ProfileCard'
 import { Link } from 'react-router-dom'
 import styles from './Profiles.module.css'
 
-const Profiles = () => {
+const Profiles = (props) => {
   const [profiles, setProfiles] = useState([])
 
   useEffect(() => {
