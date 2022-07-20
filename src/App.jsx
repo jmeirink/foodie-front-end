@@ -87,12 +87,14 @@ const App = () => {
         />
         <Route path="/edit" element={<EditPost handleUpdatePost={handleUpdatePost}  />} 
         />
+
+{/* ------------------------ */}
         <Route path="/" element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} handleAddPost={handleAddPost}/>} 
         />
-
         <Route path="/posts/:postId" element={<PostDetails user={user} posts={posts} />} 
         />
-      
+{/* ------------------------ */}
+          
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
