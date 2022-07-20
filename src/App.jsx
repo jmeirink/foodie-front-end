@@ -52,7 +52,6 @@ const App = () => {
     const newPostsArray = posts.filter(post => post._id !== deletedPost._id)
     setPosts(newPostsArray)
     navigate('/')
-    
   }
 
   const handleUpdatePost = async (postData) => {
@@ -62,7 +61,6 @@ const App = () => {
     // use new array to set new state
     setPosts(newPostsArray)
     navigate('/')
-    
   }
 
   const postPhotoHelper = async (photo, id) => {
@@ -88,13 +86,20 @@ const App = () => {
         <Route path="/edit" element={<EditPost handleUpdatePost={handleUpdatePost}  />} 
         />
 
-{/* ------------------------ */}
-        <Route path="/" element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} handleAddPost={handleAddPost}/>} 
+
+
+        <Route 
+          path="/" 
+          element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} handleAddPost={handleAddPost} />}
         />
-        <Route path="/posts/:postId" element={<PostDetails user={user} posts={posts} />} 
+
+        <Route 
+          path="/posts/:postId" 
+          element={<PostDetails user={user} posts={posts} />}
         />
-{/* ------------------------ */}
+
           
+
         <Route
           path="/signup"
           element={<Signup handleSignupOrLogin={handleSignupOrLogin} />}
