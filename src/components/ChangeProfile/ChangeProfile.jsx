@@ -9,6 +9,8 @@ const ChangeProfile = props => {
     name: '',
     bio: '',
   })
+  const [photoData, setPhotoData] = useState({})
+
   const profileId = props.profile 
 
   const handleProfileChange = e => {
@@ -18,10 +20,28 @@ const ChangeProfile = props => {
     })
   }
 
+  const handleChangeProfilePhoto = (e) => {
+    setPhotoData({ photo: e.target.files[0] })
+  }
+
+  const handleAddProfileData = async (formData, photo, profileId) => {
+    const profileChange = await profileService.changeProfile(formData, profileId)
+    if (photo) {
+      props.profile.photo = await ProfilePhotoHelper(photo, profileChange._id)
+    }
+    navigate('/')
+  }
+
+  const ProfilePhotoHelper = async (photo, id) => {
+    const photoData = new FormData()
+    photoData.append('photo', photo)
+    return await profileService.addPhoto(photoData, id)
+  }
+
   const handleProfileSubmit = async e => {
     e.preventDefault()
     try {
-      await profileService.changeProfile(formData, profileId)
+      handleAddProfileData(formData, photoData.photo ,profileId)
       navigate('/')
     } catch (err) {
       props.updateMessage(err.message)
@@ -66,6 +86,18 @@ const ChangeProfile = props => {
           onChange={handleProfileChange}
         />
       </div>
+      <div className={styles.inputContainer}>
+					<label htmlFor="profile-photo-upload" className="form-label">
+						Upload Profile Photo
+					</label>
+					<input
+						type="file"
+						className="form-control"
+						id="profile-photo-upload"
+						name="photo"
+						onChange={handleChangeProfilePhoto}
+					/>
+				</div>
       <div className={styles.inputContainer}>
         <button disabled={isFormInvalid()} className={styles.button}>
           Save Profile Changes
