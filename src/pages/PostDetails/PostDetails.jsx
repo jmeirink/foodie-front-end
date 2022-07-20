@@ -1,4 +1,4 @@
-import { useState, useEffect, useReducer } from "react"
+import { useState, useEffect } from "react"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import * as postService from '../../services/postService'
 import CommentSection from "../../components/CommentSection/CommentSection"
@@ -10,8 +10,8 @@ const PostDetails = (props) => {
   const navigate = useNavigate()
 
   const handleDeleteComment = async (postId, commentId) => {
-    postService.deleteComment(postId, commentId)
-    // navigate('/')
+    const updatedComments = await postService.deleteComment(postId, commentId)
+    setPostDetails(updatedComments)
   }
 
   console.log('LOCATION', location)
