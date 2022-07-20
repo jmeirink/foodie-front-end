@@ -2,12 +2,13 @@
   .content {
     display: flex;
     flex-direction: column;
-    /* width: 70vw; */
+    width: 85vw;
     flex: 0.5;
     justify-items: center;
-    min-width: fit-content;
     overflow-y: scroll;
     background-color: gray;
+    right: 0px;
+    position: absolute;
   }
 
   h1 {
@@ -18,4 +19,16 @@
     width: 60vw;
     margin: 0 60px;
     margin-top: 5vh;
+  }
+
+  body {
+    margin: 0px;
+    min-width: 100vw;
+  }
+
+
+  @media only screen and (max-width: 1550px) {
+    .content{
+      width: 70vw;
+    }
   }

@@ -17,13 +17,12 @@
 
 .sidebarOption .material-symbols-outlined {
   padding: 20px;
-
 }
 
 .sidebarOption h2 {
   font-weight: 800;
   font-size: 20px;
-  margin-right: 20px;
+  margin-right: 0px;
 }
 
 .sidebarOption:hover {
@@ -36,20 +35,16 @@
 body {
   display: flex;
   height: 100vh;
-  max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 10px;
 }
 
 nav {
   border-right: 1px solid black;
   flex: 0.2;
-  min-width: 300px;
-  margin-top: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-
+  min-width: 0px;
+  width: 15vw;
+  position: fixed;
+  left: 0px;
+  height: 100vh;
 }
 
 .text-link {
@@ -60,4 +55,10 @@ nav {
 .text-link:hover {
   color: inherit;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1550px) {
+  nav {
+    width: 30vw;
+  }
 }
