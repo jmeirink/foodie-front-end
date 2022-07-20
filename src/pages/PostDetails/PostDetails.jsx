@@ -29,7 +29,7 @@ const PostDetails = (props) => {
         <img src={postDetails?.photo} alt="" />
         <h3>Item Type: {postDetails?.foodBeverage}</h3>
         <h3>Review: {postDetails?.review}</h3>
-        <CommentSection postDetails={postDetails} setPostDetails={setPostDetails}/>
+        <CommentSection postDetails={postDetails} setPostDetails={setPostDetails} profile={props.user.profile}/>
       </>
   )
 }
