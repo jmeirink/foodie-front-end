@@ -128,7 +128,7 @@ const App = () => {
           path="/changePassword"
           element={
             user ? (
-              <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
+              <ChangePassword profile={user.profile} handleSignupOrLogin={handleSignupOrLogin} />
             ) : (
               <Navigate to="/login" />
             )
