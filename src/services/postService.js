@@ -74,6 +74,28 @@ async function addComment(postId, formData) {
   return await res.json()
 }
 
+async function deleteComment(postId, commentId) {
+  const res = await fetch(`${BASE_URL}/${postId}/delete-comment/${commentId}`, {
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`,
+      'Content-Type' : 'application/json'
+    }
+  })
+  return await res.json()
+}
+
+async function like(postId) {
+  const res = await fetch(`${BASE_URL}/${postId}/like`,
+  {
+    method: 'PATCH',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`
+    }
+  })
+  return await res.json()
+}
+
 export { 
   create,
   getAll,
@@ -81,5 +103,7 @@ export {
   updatePost,
   addPhoto,
   getPostDetails,
-  addComment
+  addComment,
+  deleteComment,
+  like
 }

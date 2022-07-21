@@ -1,32 +1,21 @@
 import { Link } from "react-router-dom";
 import styles from './PostCard.css'
-import { useState } from "react";
 
 
-// count like 
-function MyButton() {
-    const [count, setCount] = useState(0);
-  
-    function handleClick() {
-      setCount(count + 1);
-    }
-  
-    return (
-      <button className=" like btn" onClick={handleClick}>
-        {count} <span className="material-symbols-outlined">favorite</span>
-      </button>
-    );
-  }
 
-// count like ends
 
-const PostCard  = ({post, user, handleDeletePost}) => {
-
+const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
+    const postId = post._id
+    const likeCount = post.likes.length
+    const userLiked = post.likes.some(like => 
+        like === user.profile 
+    )
+    const isOwner = post.author._id === user.profile
     return (  
         <>
         <div className="card">
             <Link className='text-link' to={`/posts/${post._id}`} state={{post}}>
-               
+                
                 <div className="card-body">
                     <h5>{post.author?.name} had a {post.item?.itemTitle} at {post.restaurant?.title} </h5>
                     <h3> {post.review}</h3>
@@ -52,14 +41,28 @@ const PostCard  = ({post, user, handleDeletePost}) => {
             }
 
                 <button className="comments btn" title="comments">
+                <Link className='text-link' to={`/posts/${post._id}`} state={{post}}>
                 <span className="material-symbols-outlined">chat</span>
+                </Link>
                 </button>
-
-                <button className="like btn" title="like">
+                { !isOwner ?
+                <button className=" like btn" onClick={() => handleLike(postId)}> {likeCount}
+                { !userLiked ?
+                    <span className="material-symbols-outlined">
+                    heart_plus
+                    </span>
+                :
+                    <span className="material-symbols-outlined">
+                    heart_minus
+                    </span>
+                }
+                </button>
+                :
+                <p>
+                {likeCount}
                 <span className="material-symbols-outlined">favorite</span>
-                <MyButton />
-                </button>
-
+                </p>
+                }
             </div>
         </div>
         </>

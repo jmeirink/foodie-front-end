@@ -1,19 +1,33 @@
 import PostCard from "../../components/PostCard/PostCard";
 import AddPost from "../AddPost/AddPost";
 import styles from './PostList.module.css'
+import { useState, useEffect } from "react";
+import * as postService from '../../services/postService'
+
+
 
 const PostList = (props) => {
+  const {posts} = props
+  // const [posts, setPosts] = useState([])
+  // useEffect (() => {
+  //   const fetchAllPosts = async () => {
+  //     const postData = await postService.getAll()
+  //     setPosts(postData)
+  //   }
+  //   fetchAllPosts()
+  // },[])
     return (  
       <>
         <div className="container">
         <AddPost handleAddPost={props.handleAddPost} />
         <h1>Posts</h1>
-        {props.posts.map(post =>
+        {posts.map(post =>
           <PostCard 
             key={post._id} 
             user={props.user} 
             post={post} 
             handleDeletePost={props.handleDeletePost}
+            handleLike={props.handleLike}
           />
         )}
         </div>
