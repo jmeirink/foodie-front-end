@@ -7,14 +7,15 @@ import * as postService from '../../services/postService'
 
 
 const PostList = (props) => {
-  const [posts, setPosts] = useState([])
-  useEffect (() => {
-    const fetchAllPosts = async () => {
-      const postData = await postService.getAll()
-      setPosts(postData)
-    }
-    fetchAllPosts()
-  },[])
+  const {posts} = props
+  // const [posts, setPosts] = useState([])
+  // useEffect (() => {
+  //   const fetchAllPosts = async () => {
+  //     const postData = await postService.getAll()
+  //     setPosts(postData)
+  //   }
+  //   fetchAllPosts()
+  // },[])
     return (  
       <>
         <div className="container">

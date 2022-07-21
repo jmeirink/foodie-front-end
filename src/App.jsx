@@ -101,7 +101,7 @@ const App = () => {
         />
         <Route 
           path="/" 
-          element={<PostList user={user} handleDeletePost={handleDeletePost} handleAddPost={handleAddPost} handleLike={handleLike}/>}
+          element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} handleAddPost={handleAddPost} handleLike={handleLike}/>}
         />
         <Route 
           path="/posts/:postId" 
