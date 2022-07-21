@@ -1,0 +1,29 @@
+
+.rest-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 0px;
+}
+
+.rest-form-label {
+  width: 24vw;
+}
+
+.search-div, .location-div {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 24vw;
+  margin: 1vw;
+}
+
+
+@media only screen and (min-width: 1550px) {
+  .rest-form-label {
+    width: 14vw;
+  }
+  .search-div, .location-div {
+    width: 14vw;
+  }
+}

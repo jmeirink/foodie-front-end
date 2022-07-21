@@ -16,7 +16,8 @@
 
   .card {
     width: 40vw;
-    margin: 5vh 60px;
+    margin: 0 60px;
+    margin-top: 5vh;
   }
 
   body {
@@ -28,5 +29,8 @@
   @media only screen and (max-width: 1550px) {
     .content{
       width: 70vw;
+    }
+    .card {
+      width: 60vw;
     }
   }
