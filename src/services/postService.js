@@ -85,6 +85,17 @@ async function deleteComment(postId, commentId) {
   return await res.json()
 }
 
+async function like(postId) {
+  const res = await fetch(`${BASE_URL}/${postId}/like`,
+  {
+    method: 'PUT',
+    headers: {
+      'Authorization': `Bearer ${tokenService.getToken()}`
+    }
+  })
+  return await res.json()
+}
+
 export { 
   create,
   getAll,
@@ -93,5 +104,6 @@ export {
   addPhoto,
   getPostDetails,
   addComment,
-  deleteComment
+  deleteComment,
+  like
 }

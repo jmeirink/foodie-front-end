@@ -3,29 +3,15 @@ import styles from './PostCard.css'
 import { useState } from "react";
 
 
-// count like 
-function MyButton() {
-    const [count, setCount] = useState(0);
-  
-    function handleClick() {
-      setCount(count + 1);
-    }
-  
-    return (
-      <button className=" like btn" onClick={handleClick}>
-        {count} <span className="material-symbols-outlined">favorite</span>
-      </button>
-    );
-  }
 
-// count like ends
+const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
+    const postId = post._id
 
-const PostCard  = ({post, user, handleDeletePost}) => {
     return (  
         <>
         <div className="card">
             <Link className='text-link' to={`/posts/${post._id}`} state={{post}}>
-               
+                
                 <div className="card-body">
                     <h5>{post.author?.name} had a {post.item?.itemTitle} at {post.restaurant?.title} </h5>
                     <h3> {post.review}</h3>
@@ -54,7 +40,10 @@ const PostCard  = ({post, user, handleDeletePost}) => {
                 <span className="material-symbols-outlined">chat</span>
                 </button>
 
-                <MyButton />
+                <button className=" like btn" onClick={() => handleLike(postId)}>
+        <span className="material-symbols-outlined">favorite</span>
+      </button>
+
                 
             </div>
         </div>
