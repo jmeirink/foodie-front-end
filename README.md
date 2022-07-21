@@ -11,6 +11,12 @@ Elijah Andrews - https://github.com/ElijahSMIAEL
 Eduardo Gonzalez - https://github.com/eagonzalez1
 </br></br>
 
+************Screenshots here*********** (delete)
+<img src="">
+<img src="">
+</br></br>
+
+
 This is the front end of a decoupled MERN Stack app that includes JWT Authentication. When combined with the back end found [here](https://github.com/jmeirink/foodie-back-end), this is a social media app focused on sharing the user's dining experience. Unlike most restaurant review apps, Foodie allows reviewers to post specific dishes or cocktails and connect with other like-minded 'foodies.'
 </br></br>
 
