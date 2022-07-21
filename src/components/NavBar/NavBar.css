@@ -57,6 +57,28 @@ nav {
   text-decoration: none;
 }
 
+.comment-card {
+  background-color: white;
+  padding: 10px;
+  margin: 15px;
+  width: 500px;
+  border-radius: 5px;
+}
+
+.comment h5 {
+  font-style: italic;
+}
+
+.comment-card-footer{
+  padding: 0;
+  display: flex;
+  justify-content: end;
+}
+
+
+
+
+
 @media only screen and (max-width: 1550px) {
   nav {
     width: 30vw;
