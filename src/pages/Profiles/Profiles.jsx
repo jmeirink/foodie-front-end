@@ -17,15 +17,17 @@ const Profiles = (props) => {
 
   return (
     <>
-      <h1>Hello. This is a list of all the profiles.</h1>
+      <h1>Friends</h1>
       {profiles.length ? 
         <>
+        <div className="container text-center">
           {profiles.map(profile =>
               <ProfileCard
                 profile={profile}
                 key={profile._id}
               />
           )}
+          </div>
         </>
       :
         <p>No profiles yet</p>

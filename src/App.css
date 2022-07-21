@@ -1,4 +1,3 @@
-
   .content {
     display: flex;
     flex-direction: column;
@@ -16,9 +15,8 @@
   }
 
   .card {
-    width: 60vw;
-    margin: 0 60px;
-    margin-top: 5vh;
+    width: 40vw;
+    margin: 5vh 60px;
   }
 
   body {
