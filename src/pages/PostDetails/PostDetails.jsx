@@ -30,17 +30,20 @@ const PostDetails = (props) => {
   
   return (  
       <>
+      <div className="container text-center">
       <div className="card">
       <Link className="text-link" to={`/profiles/${profile.name}`} state={{profile}}>
         <div className="card-body">
           <h5>{postDetails?.author.name} had a {postDetails?.item?.itemTitle} at {postDetails?.restaurant?.title}</h5>
+          <h5>{postDetails.item?.itemPrice}</h5>
           <h3>{postDetails?.review}</h3>
           <img src={postDetails?.photo} alt="" />
         </div>
         </Link>
       </div>
 
-        <CommentSection postDetails={postDetails} setPostDetails={setPostDetails} handleDeleteComment={handleDeleteComment} profile={props.user?.profile} />
+        <CommentSection postDetails={postDetails} setPostDetails={setPostDetails} handleDeleteComment={handleDeleteComment} profile={props.user.profile} />
+      </div>
       </>
   )
 }

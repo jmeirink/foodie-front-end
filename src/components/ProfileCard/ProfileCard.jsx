@@ -7,7 +7,7 @@ const ProfileCard = (props) => {
   return(
     <div className="card">
       <div className="card-body">
-        <div className="friends-avatar" >
+        <div className="friends-avatar text-center" >
           {props.profile.profilePhoto ? 
           <img src={props.profile.profilePhoto} alt=""/>
         :
@@ -16,7 +16,7 @@ const ProfileCard = (props) => {
         </div>
         <div>
         <Link to={`/profiles/${props.profile.name}`} state={{profile}}>
-          <h2 className="card-text">
+          <h2 className="card-text text-center">
             {props.profile.name}
           </h2>
         </Link>

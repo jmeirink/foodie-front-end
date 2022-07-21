@@ -1,0 +1,10 @@
+.container {
+  width: 90%;
+  grid-template-rows: repeat(minmax(170px, 1fr));
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+
+h1 {
+  margin-top: 50px;
+}

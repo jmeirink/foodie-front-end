@@ -1,22 +1,19 @@
-
 img:first-child {
+    margin-top: 25px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     border: 3px solid black;
-
 }
 
-
+div > h1 {
+    margin: 10px;
+}
 
 div > h2 {
     background-color: white;
+    margin-top: 50px;
     padding: 20px;
     width: 80%;
     font-style: italic;
-}
-
-.profile-details-header {
-    background-color: blue;
-
 }
