@@ -44,7 +44,8 @@ const AddComment = (props) =>  {
         className={styles.container}
       >
         <div className={styles.inputContainer}>
-          <input 
+          <input
+            className={styles.commentInput}
             type="text"
             id="comment-input"
             name="comment"
@@ -52,7 +53,7 @@ const AddComment = (props) =>  {
             onChange={handleCommentChange}
           />
         </div>
-        <button disabled={isFormInvalid()} className={styles.button}>
+        <button disabled={isFormInvalid()} className={styles.commentButton}>
           Add Comment
         </button>
       </form>

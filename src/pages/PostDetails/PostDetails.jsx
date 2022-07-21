@@ -38,7 +38,11 @@ const PostDetails = (props) => {
           <h3>{postDetails?.author.name} had a {postDetails?.item?.itemTitle} at {postDetails?.restaurant?.title}</h3>
           <h4>{postDetails.item?.itemPrice}</h4>
           <h5>{postDetails?.review}</h5>
-          <img src={postDetails?.photo} alt="" />
+          { postDetails.photo ?
+            <img src={postDetails?.photo} alt="" />
+            :
+            <img src="/Foodpic.jpg" alt="" />
+            }
           </div>
         </div>
         </Link>
