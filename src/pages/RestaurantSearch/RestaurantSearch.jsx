@@ -14,7 +14,7 @@ const RestaurantSearch = (props) => {
 
   return (
     <>
-      <h3>Restaurant Search</h3>
+      <h3 className='rest-head'>Restaurant Search</h3>
       <SearchForm handleRestaurantSearch={handleRestaurantSearch} />
       {restaurants.length ? 
         <>
@@ -29,7 +29,9 @@ const RestaurantSearch = (props) => {
           </select>
         </>
         :
-        <h3>Please search for a Restaurant!</h3>
+        <div>
+          <h3>Please search for a Restaurant!</h3>
+        </div>
       }
     </>
   );

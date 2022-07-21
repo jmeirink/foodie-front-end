@@ -1,0 +1,14 @@
+div > h3 {
+  border-bottom: solid 2px darkslategray;
+  width: 50vw;
+  text-align: center;
+  padding-bottom: 1vh;
+  margin-top: 1vh;
+}
+
+
+@media only screen and (min-width: 1550px) {
+  div > h3 {
+    width: 30vw;
+  }
+}

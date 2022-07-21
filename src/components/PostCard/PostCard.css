@@ -1,4 +1,8 @@
 
+.card {
+    box-shadow: 10px 10px 10px black;
+}
+
 .post-footer {
     display: flex;
     justify-content:end;

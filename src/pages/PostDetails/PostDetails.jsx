@@ -40,7 +40,7 @@ const PostDetails = (props) => {
         </Link>
       </div>
 
-        <CommentSection postDetails={postDetails} setPostDetails={setPostDetails} handleDeleteComment={handleDeleteComment} profile={props.user.profile} />
+        <CommentSection postDetails={postDetails} setPostDetails={setPostDetails} handleDeleteComment={handleDeleteComment} profile={props.user?.profile} />
       </>
   )
 }
