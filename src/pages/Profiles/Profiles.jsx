@@ -17,6 +17,7 @@ const Profiles = (props) => {
 
   return (
     <>
+    <div className="container text-center">
       <h1>Friends</h1>
       {profiles.length ? 
         <>
@@ -32,6 +33,7 @@ const Profiles = (props) => {
       :
         <p>No profiles yet</p>
       }
+    </div>
     </>
   )
 }
