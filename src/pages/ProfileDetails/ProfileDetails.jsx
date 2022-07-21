@@ -4,9 +4,11 @@ import { getProfileDetails } from "../../services/profileService"
 import styles from './ProfileDetails.module.css'
 import PostCard from "../../components/PostCard/PostCard"
 import * as postService from '../../services/postService'
+import { getUser } from "../../services/authService"
 
 
 const ProfileDetails = (props) => {
+  const [user, setUser] = useState(getUser())
   const location = useLocation()
   const [profileDetails, setProfileDetails] = useState({})
   const [posts, setPosts] = useState([])
@@ -26,6 +28,12 @@ const ProfileDetails = (props) => {
     }
     fetchAllPosts()
   },[])
+
+  const handleLike = async (postId) => {
+    const likePost = await postService.like(postId)
+    const newPostsArray = posts.map(post => post._id === likePost._id ? likePost : post)
+    setPosts(newPostsArray)
+  }
   
   const ownedPosts = posts.filter(post => post.author._id === profileDetails._id)
   
@@ -54,9 +62,11 @@ const ProfileDetails = (props) => {
         <h1>Posts</h1>
         {ownedPosts.map(post =>
           <PostCard 
+            user={user}
             key={post._id} 
             post={post} 
             handleDeletePost={props.handleDeletePost}
+            handleLike={handleLike}
           />
         )}
         </div>

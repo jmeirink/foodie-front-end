@@ -78,7 +78,6 @@ const App = () => {
     const likePost = await postService.like(postId)
     const newPostsArray = posts.map(post => post._id === likePost._id ? likePost : post)
     setPosts(newPostsArray)
-    navigate('/')
   }
 
   return (
