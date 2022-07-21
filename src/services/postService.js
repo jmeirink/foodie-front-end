@@ -88,7 +88,7 @@ async function deleteComment(postId, commentId) {
 async function like(postId) {
   const res = await fetch(`${BASE_URL}/${postId}/like`,
   {
-    method: 'PUT',
+    method: 'PATCH',
     headers: {
       'Authorization': `Bearer ${tokenService.getToken()}`
     }

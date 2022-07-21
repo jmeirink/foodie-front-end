@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
 import styles from './PostCard.css'
-import { useState } from "react";
+
 
 
 
 const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
     const postId = post._id
-
+    const likeCount = post.likes.length
+    const userLiked = post.likes.some(like => 
+        like === user.profile 
+    )
+    console.log(userLiked)
     return (  
         <>
         <div className="card">
@@ -37,14 +41,22 @@ const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
             }
 
                 <button className="comments btn" title="comments">
+                <Link className='text-link' to={`/posts/${post._id}`} state={{post}}>
                 <span className="material-symbols-outlined">chat</span>
+                </Link>
                 </button>
 
-                <button className=" like btn" onClick={() => handleLike(postId)}>
-        <span className="material-symbols-outlined">favorite</span>
-      </button>
-
-                
+                <button className=" like btn" onClick={() => handleLike(postId)}> {likeCount}
+                { !userLiked ?
+                    <span class="material-symbols-outlined">
+                    heart_plus
+                    </span>
+                :
+                    <span class="material-symbols-outlined">
+                    heart_minus
+                    </span>
+                }
+                </button>
             </div>
         </div>
         </>
