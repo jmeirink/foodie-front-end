@@ -1,11 +1,22 @@
 # Foodie - Front End
 
-This is the front end of a decoupled MERN Stack app that includes JWT Authentication. When combined with the back end found [here](https://github.com/jmeirink/foodie-back-end), this is a social media app focused on sharing the user's dining experience. Unlike most restaurant review apps, Foodie allows reviewers to post . 
+**From:**
 
+Jesse Meirink - https://github.com/jmeirink
 
+Kairo Ribeiro - https://github.com/kairoribeiro
 
-### Link to view my webiste</br>
-https://foodie-foodfrat.netlify.app/</br>
+Elijah Andrews - https://github.com/ElijahSMIAEL
+
+Eduardo Gonzalez - https://github.com/eagonzalez1
+</br></br>
+
+This is the front end of a decoupled MERN Stack app that includes JWT Authentication. When combined with the back end found [here](https://github.com/jmeirink/foodie-back-end), this is a social media app focused on sharing the user's dining experience. Unlike most restaurant review apps, Foodie allows reviewers to post specific dishes or cocktails and connect with other like-minded 'foodies.'
+</br></br>
+
+### [Link to view the deployed webiste](https://foodie-foodfrat.netlify.app/)
+[Trello Planning Materials](https://trello.com/b/JXTDfSRQ/foodie)</br>
+[Back End GithHub Repo](https://github.com/jmeirink/foodie-back-end)
 </br></br>
 
 __Technologies used:__
@@ -39,7 +50,6 @@ __Recent changes:__</br>
 Created App: 22 July 2022</br>
 </br></br>
 
-__Icebox Items:__</br>
-</br>
-Add application tracker</br>
-Ability to make more changes on Job Posts page</br>
+__Icebox Items:__
+- Create the ability to 'friend' other other users and follow their posts.
+- Create the ability to sort through posts given prescribed parameters.
