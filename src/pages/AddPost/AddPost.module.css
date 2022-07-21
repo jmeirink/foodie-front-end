@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
@@ -10,22 +10,67 @@
   .button {
     margin-right: .5rem;
   }
+
+  label {
+    width: 50vw;
+  } 
   
   .inputContainer {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 1rem;
   }
 
   main {
-    /* flex: 0.5; */
-    border-right: 1px solid black;
-    min-width: fit-content;
-    /* overflow-y: scroll; */
-    background-color: rgb(109, 109, 176);
-    padding: 20px;
-    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60vw;
+    background-color: #fff;
+    padding: 30px;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border: 1px solid rgba(0,0,0,.125)
+  }
+
+  input, textarea {
+    border: solid 2px darkslategray;
+  }
+  textarea {
+    width: 50vw;
+    align-self: center;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
   }
 
   #review {
     background-color: black;
   }
+  
 
+
+  .rest-inputs {
+    display: flex;
+    flex-direction: row;
+    max-width: 25vw;
+  }
+
+  .food-and-photo {
+    display: flex;
+    flex-direction: row;
+  }
+
+  select {
+    border: solid 2px lightcoral;
+    color: white;
+    background-color: darkslategray;
+    padding: 3px;  
+  }
+
+  

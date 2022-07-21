@@ -20,25 +20,30 @@ const SearchForm = (props) => {
     <>
       <div>
         <form onSubmit={handleSubmit}>
-          <label htmlFor="location-input" className="form-label">Search:</label>
-          <input 
-            type="text" 
-            name="query" 
-            autoComplete="off"
-            value={formData.query}
-            onChange={handleChange}
-          />
-          <label htmlFor="location-input" className="form-label">Location (or zip)</label>
-          <input 
-            type="text" 
-            name="location" 
-            autoComplete="off"
-            value={formData.location}
-            onChange={handleChange}
-          />
+          <div className="rest-inputs">
+            <div className="search-div">
+              <label htmlFor="search-input" className="rest-form-label">Search:</label>
+                <input 
+                type="text" 
+                name="query" 
+                autoComplete="off"
+                value={formData.query}
+                onChange={handleChange}
+                />
+              </div>
+              <div className="location-div">
+                <label htmlFor="location-input" className="rest-form-label">Location (or zip)</label>
+                <input 
+                type="text" 
+                name="location" 
+                autoComplete="off"
+                value={formData.location}
+                onChange={handleChange}
+                />
+              </div>
+            </div>
           <button type="submit">Search</button>
         </form>
-
       </div>
     </>
   );

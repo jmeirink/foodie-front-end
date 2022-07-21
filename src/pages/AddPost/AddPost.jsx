@@ -44,7 +44,7 @@ const AddPost = (props) => {
     <>
     <main>
         <div className="feed-header">
-          <h1>Post</h1>
+          <h1>Post Something!</h1>
         </div>
 
       <form 
@@ -54,17 +54,17 @@ const AddPost = (props) => {
         <div className={styles.inputContainer}>
           <label htmlFor="item-input" className="form-label">
               Menu Item (required)
-            </label>
+            </label><br/>
             <input 
               type="text"
               id="item-input"
               name="itemTitle"
               value={formData.itemTitle}
               onChange={handleChange}
-            />
+            /><br/>
             <label htmlFor="item-price-input" className="form-label">
               Item Price
-            </label>
+            </label><br/>
             <input 
               type="text"
               id="item-price-input"
@@ -74,8 +74,8 @@ const AddPost = (props) => {
             />
           </div>
         <div className={styles.inputContainer}>
-          <label htmlFor="review" className={styles.label}>Review</label>
-          <input
+          <label htmlFor="review" className={styles.label}>Review</label><br/>
+          <textarea
             type="text"
             autoComplete="off"
             id="review"
@@ -84,8 +84,9 @@ const AddPost = (props) => {
             onChange={handleChange}
           />
         </div>
+        <div className="food-and-photo">
         <div className={styles.inputContainer}>
-          <label htmlFor="food-beverage-select">Food or beverage?</label>
+          <label htmlFor="food-beverage-select">Food or beverage?</label><br/>
             <select 
               id="food-beverage-select"
               name="foodBeverage" 
@@ -108,6 +109,7 @@ const AddPost = (props) => {
 						onChange={handleChangePhoto}
 					/>
 				</div>
+      </div>
 
         <button disabled={isFormInvalid()} className={styles.button}>
           Add Post

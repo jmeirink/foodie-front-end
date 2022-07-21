@@ -1,0 +1,20 @@
+
+.rest-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 25vw;
+  margin-left: 0px;
+}
+
+.rest-form-label {
+  width: fit-content;
+}
+
+.search-div, .location-div {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 24vw;
+  margin: 1vw;
+}
