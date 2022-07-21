@@ -1,0 +1,23 @@
+
+.label,
+.button {
+  margin-right: .5rem;
+}
+
+
+.addComment {
+  align-items: center;
+  display: flex;
+  margin-top: 2vh;
+  width: 50vw;
+  height: 20vh;
+  margin-bottom: 3vh;
+  padding-top: 3vh ;
+}
+
+.addCommentHeader {
+  margin-top: 5px;
+}
+
+
+

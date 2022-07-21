@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import styles from './AddComment.css'
+import styles from './AddComment.module.css'
 import { addComment } from "../../services/postService"
 
 
@@ -36,8 +36,8 @@ const AddComment = (props) =>  {
 
     return(
     <>
-      <main>
-        <h1>Add a comment!</h1>
+      <main className={styles.addComment}>
+        <h1 className={styles.addCommentHeader}>Add a comment!</h1>
       <form
         onSubmit={handleCommentSubmit}
         autoComplete="off"

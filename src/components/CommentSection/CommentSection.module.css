@@ -1,0 +1,9 @@
+.commentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.commentHeader {
+  margin-top: 4vh;
+}
