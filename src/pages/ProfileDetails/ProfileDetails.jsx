@@ -39,27 +39,27 @@ const ProfileDetails = (props) => {
   
   return(
     <div>
-      <div>
-      <h1>{profileDetails.name}</h1>
-      <div>
-        {profileDetails.profilePhoto ? 
-          <img src={profileDetails.profilePhoto} alt=""/>
-        :
-          <img src="/BurgerLogo.jpg" alt=""/>
-        }
-      </div>
+      <div className="container">
+        <h1>{profileDetails.name}</h1>
+        <div>
+          {profileDetails.profilePhoto ? 
+            <img src={profileDetails.profilePhoto} alt=""/>
+          :
+            <img src="/BurgerLogo.jpg" alt=""/>
+          }
+        </div>
 
-      <div>
-        {profileDetails.bio ? 
-          <h2>"{profileDetails.bio}"</h2>
-        :
-          <h2>This User Has No Bio</h2>
-        }
-      </div>
+        <div className="container text-center">
+          {profileDetails.bio ? 
+            <h2>"{profileDetails.bio}"</h2>
+          :
+            <h2>This User Has No Bio</h2>
+          }
+        </div>
       </div>
       
       <div className="container">
-        <h1>Posts</h1>
+        <h1 className="posts-text">Posts</h1>
         {ownedPosts.map(post =>
           <PostCard 
             user={user}

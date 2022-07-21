@@ -30,6 +30,7 @@ const PostDetails = (props) => {
   
   return (  
       <>
+      <div className="container text-center">
       <div className="card">
       <Link className="text-link" to={`/profiles/${profile.name}`} state={{profile}}>
         <div className="card-body">
@@ -41,6 +42,7 @@ const PostDetails = (props) => {
       </div>
 
         <CommentSection postDetails={postDetails} setPostDetails={setPostDetails} handleDeleteComment={handleDeleteComment} profile={props.user.profile} />
+      </div>
       </>
   )
 }
