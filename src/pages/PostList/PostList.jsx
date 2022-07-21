@@ -14,6 +14,7 @@ const PostList = (props) => {
             user={props.user} 
             post={post} 
             handleDeletePost={props.handleDeletePost}
+            handleLike={props.handleLike}
           />
         )}
         </div>

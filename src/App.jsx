@@ -71,7 +71,15 @@ const App = () => {
     photoData.append('photo', photo)
     return await postService.addPhoto(photoData, id)
   }
+
+
   
+  const handleLike = async (postId) => {
+    const likePost = await postService.like(postId)
+    const newPostsArray = posts.map(post => post._id === likePost._id ? likePost : post)
+    setPosts(newPostsArray)
+    navigate('/')
+  }
 
   return (
     <>
@@ -94,7 +102,7 @@ const App = () => {
         />
         <Route 
           path="/" 
-          element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} handleAddPost={handleAddPost} />}
+          element={<PostList user={user} posts={posts} handleDeletePost={handleDeletePost} handleAddPost={handleAddPost} handleLike={handleLike}/>}
         />
         <Route 
           path="/posts/:postId" 
