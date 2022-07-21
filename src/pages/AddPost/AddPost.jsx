@@ -65,13 +65,19 @@ const AddPost = (props) => {
             <label htmlFor="item-price-input" className="form-label">
               Item Price
             </label>
-            <input 
+            <select
               type="text"
               id="item-price-input"
               name="itemPrice"
               value={formData.itemPrice}
               onChange={handleChange}
-            />
+            >
+            <option value="﹩">﹩</option>
+              <option value="﹩﹩">﹩﹩</option>
+              <option value="﹩﹩﹩">﹩﹩﹩</option>
+              <option value="﹩﹩﹩﹩">﹩﹩﹩﹩</option>
+              <option value="﹩﹩﹩﹩﹩">﹩﹩﹩﹩﹩</option>
+            </select>
           </div>
         <div className={styles.inputContainer}>
           <label htmlFor="review" className={styles.label}>Review</label>
