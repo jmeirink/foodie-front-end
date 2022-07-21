@@ -48,11 +48,11 @@ const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
                 { !isOwner ?
                 <button className=" like btn" onClick={() => handleLike(postId)}> {likeCount}
                 { !userLiked ?
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                     heart_plus
                     </span>
                 :
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                     heart_minus
                     </span>
                 }
@@ -60,7 +60,7 @@ const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
                 :
                 <p>
                 {likeCount}
-                <span class="material-symbols-outlined">favorite</span>
+                <span className="material-symbols-outlined">favorite</span>
                 </p>
                 }
             </div>
