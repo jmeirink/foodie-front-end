@@ -8,9 +8,9 @@ const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
     const postId = post._id
     const likeCount = post.likes.length
     const userLiked = post.likes.some(like => 
-        like === user.profile 
+        like === user?.profile 
     )
-    const isOwner = post.author._id === user.profile
+    const isOwner = post.author._id === user?.profile
     return (  
         <>
         <div className="card">
