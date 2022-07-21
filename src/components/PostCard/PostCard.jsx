@@ -10,7 +10,7 @@ const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
     const userLiked = post.likes.some(like => 
         like === user.profile 
     )
-    console.log(userLiked)
+    const isOwner = post.author._id === user.profile
     return (  
         <>
         <div className="card">
@@ -45,7 +45,7 @@ const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
                 <span className="material-symbols-outlined">chat</span>
                 </Link>
                 </button>
-
+                { !isOwner ?
                 <button className=" like btn" onClick={() => handleLike(postId)}> {likeCount}
                 { !userLiked ?
                     <span class="material-symbols-outlined">
@@ -57,6 +57,12 @@ const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
                     </span>
                 }
                 </button>
+                :
+                <p>
+                {likeCount}
+                <span class="material-symbols-outlined">favorite</span>
+                </p>
+                }
             </div>
         </div>
         </>
