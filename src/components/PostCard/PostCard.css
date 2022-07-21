@@ -6,18 +6,31 @@
 .post-footer {
     display: flex;
     justify-content:end;
-    margin-top: 10px;
     border-top: 1px solid gray;
-    padding: 5px;
+    padding: 5px 0px 0px;
 }
 
 .card-body img {
-    width: 150px;
+    max-width: 50vw;
+    width: 50vw;
+    margin-bottom: 0px;
+    border: solid 3px black;
 }
 
-.card-body h5 {
-    color: rgb(70, 67, 67);
-    font-style: italic;
+.card-body h3 {
+    border: solid 2px darkslategrey;
+    padding: 1vh;
+    color: black;
+    background-color: rgb(253, 166, 166);
+    box-shadow: 2px 2px 4px black;
+}
+
+.card-body h4 {
+    color: green;
+    padding: .5vh;
+    background-color: rgb(176, 253, 176);
+    border: solid;
+    border-radius: 12px; 
 }
 
 .text-link {
@@ -45,4 +58,12 @@
 .comments:hover {
     color: blue;
 }
+
+
+@media only screen and (min-width: 1550px) {
+  .card-body img {
+    width: 30vw;
+  }
+}
+
 

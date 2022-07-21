@@ -17,10 +17,11 @@ const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
             <Link className='text-link' to={`/posts/${post._id}`} state={{post}}>
                 
                 <div className="card-body">
-                    <h5>{post.author?.name} had a {post.item?.itemTitle} at {post.restaurant?.title}</h5>
-                    <h5>{post.item?.itemPrice}</h5>
-                    <h3> {post.review}</h3>
-                    <img src={post?.photo} alt="" />
+                    <div className="container">
+                        <h3>{post.author?.name} had a {post.item?.itemTitle} at {post.restaurant?.title}</h3>
+                        <h4>{post.item?.itemPrice}</h4>
+                            <img src={post?.photo} alt="" />
+                    </div>
                 </div>
             </Link>
 
