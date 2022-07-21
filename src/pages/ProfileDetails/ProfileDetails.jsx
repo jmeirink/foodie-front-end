@@ -49,11 +49,11 @@ const ProfileDetails = (props) => {
           }
         </div>
 
-        <div className="container text-center">
+        <div className={styles.bioContainer}>
           {profileDetails.bio ? 
-            <h2>"{profileDetails.bio}"</h2>
+            <h2 className={styles.bio}>"{profileDetails.bio}"</h2>
           :
-            <h2>This User Has No Bio</h2>
+            <h2 className={styles.bio}>This User Has No Bio</h2>
           }
         </div>
       </div>

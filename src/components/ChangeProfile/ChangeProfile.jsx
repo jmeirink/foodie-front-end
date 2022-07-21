@@ -65,6 +65,7 @@ const ChangeProfile = props => {
           Preferred Name
         </label>
         <input
+          className={styles.profileInput}
           type="text"
           autoComplete="off"
           id="name-input"
@@ -78,6 +79,7 @@ const ChangeProfile = props => {
           Bio
         </label>
         <input
+          className={styles.profileInput}
           type="text"
           autoComplete="off"
           id="bio-input"
