@@ -17,25 +17,25 @@ const Profiles = (props) => {
 
   return (
     <>
-    <div className="container text-center">
-      <h1>Friends</h1>
-      {profiles.length ? 
-        <>
-        <div className="container text-center">
-          {profiles.map(profile =>
-              <ProfileCard
-                profile={profile}
-                key={profile._id}
-              />
-          )}
-          </div>
-        </>
-      :
-        <p>No profiles yet</p>
-      }
-    </div>
+      <div className="container text-center">
+        <h1>Friends</h1>
+        {profiles.length ? 
+          <>
+          <div className="container text-center">
+            {profiles.map(profile =>
+                <ProfileCard
+                  profile={profile}
+                  key={profile._id}
+                />
+            )}
+            </div>
+          </>
+        :
+          <p>No profiles yet</p>
+        }
+      </div>
     </>
   )
 }
- 
+
 export default Profiles
