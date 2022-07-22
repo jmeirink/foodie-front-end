@@ -30,7 +30,7 @@ const RestaurantSearch = (props) => {
         </>
         :
         <div>
-          <h3>Please search for a Restaurant!</h3>
+          <h3 className={styles.restaurantPrompt}>Please search for a Restaurant!</h3>
         </div>
       }
     </>

@@ -46,12 +46,13 @@ const SignupForm = props => {
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className={styles.container}
+      className={styles.signupContainer}
     >
       <div className={styles.inputContainer}>
         <label htmlFor="name" className={styles.label}>Name</label>
         <input
           type="text"
+          className={styles.signupInput}
           autoComplete="off"
           id="name"
           value={name}
@@ -63,6 +64,7 @@ const SignupForm = props => {
         <label htmlFor="email" className={styles.label}>Email</label>
         <input
           type="text"
+          className={styles.signupInput}
           autoComplete="off"
           id="email"
           value={email}
@@ -74,6 +76,7 @@ const SignupForm = props => {
         <label htmlFor="password" className={styles.label}>Password</label>
         <input
           type="password"
+          className={styles.signupInput}
           autoComplete="off"
           id="password"
           value={password}
@@ -86,6 +89,7 @@ const SignupForm = props => {
           Confirm Password
         </label>
         <input
+          className={styles.signupInput}
           type="password"
           autoComplete="off"
           id="confirm"
@@ -100,6 +104,7 @@ const SignupForm = props => {
         </label>
         <input
           type="file"
+          className={styles.signupInput}
           id="photo-upload"
           name="photo"
           onChange={handleChangePhoto}
@@ -110,7 +115,7 @@ const SignupForm = props => {
           Sign Up
         </button>
         <Link to="/">
-          <button>Cancel</button>
+          <button className={styles.button}>Cancel</button>
         </Link>
       </div>
     </form>

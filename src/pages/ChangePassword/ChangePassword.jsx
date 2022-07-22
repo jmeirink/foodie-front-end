@@ -27,7 +27,7 @@ const ChangePassword = props => {
       <h2 className={styles.bio}>"{profileDetails.bio}"</h2>
       <h1>Profile Settings</h1>
       <ChangeProfile profile={props.profile}/>
-      <h3>Change Password</h3>
+      <h1>Change Password</h1>
       <p>{message}</p>
       <ChangePasswordForm {...props} updateMessage={updateMessage} />
     </main>

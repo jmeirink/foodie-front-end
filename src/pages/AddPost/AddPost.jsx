@@ -44,7 +44,7 @@ const AddPost = (props) => {
       <>
       <main>
         <div className="feed-header">
-          <h1 id="post-head">Post Something!</h1>
+          <h1 className={styles.addPostHeader}>Post Something!</h1>
         </div>
       <RestaurantSearch handleChange={handleChange}/>
           <form 
