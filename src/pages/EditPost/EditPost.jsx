@@ -37,6 +37,7 @@ const EditPost = (props) => {
   return (
     <>
       <h1>Edit Post</h1>
+      <div className={styles.editForm}>
       <h2>{formData.item.itemTitle}</h2>
       <h4>From: {formData.restaurant?.title}</h4>
       <h4>Reviewed by {formData.author.name}</h4>
@@ -68,6 +69,7 @@ const EditPost = (props) => {
         Edit Post
         </button>
       </form>
+      </div>
     </>
   );
 }

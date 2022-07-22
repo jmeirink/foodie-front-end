@@ -1,16 +1,24 @@
 .container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .label,
-  .button {
-    margin-right: .5rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: column;
+}
+
   
   .inputContainer {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 1rem;
   }
   
+  .editForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 40px;
+    box-shadow: 10px 10px 10px black;
+    margin-bottom: 20px;
+    height: fit-content;
+  }
