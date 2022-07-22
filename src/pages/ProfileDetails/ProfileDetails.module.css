@@ -7,13 +7,18 @@ img:first-child {
 }
 
 div > h1 {
-    margin: 10px;
+    margin: 50px;
 }
 
-div > h2 {
-    background-color: white;
-    margin-top: 50px;
-    padding: 20px;
-    width: 80%;
+.bio {
+    font-size: 2.6rem;
+    color: salmon;
+    text-shadow: 2px 2px 0px black;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    padding: 0px;
+    width: 40vw;
     font-style: italic;
+    overflow-wrap: break-word;
 }

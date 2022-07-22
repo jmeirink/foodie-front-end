@@ -18,20 +18,19 @@ const CommentCard = (props) => {
 
   return(
     <>
-      <div className="comment-card">
-        <div className="comment">
-        <h5>{props.comment.author}</h5>
-        <h3>{props.comment.comment}</h3>
+      <div className={styles.commentCard}>
+        <div className={styles.comment}>
+        <h5 className={styles.commentAuthor}>-{props.comment.author}</h5>
+        <h3 className={styles.commentText}>{props.comment.comment}</h3>
         </div>
 
         {profileDetails.name === props.comment.author &&
-        <div className="comment-card-footer">
+        <div className={styles.commentCardFooter}>
           <button className="btn delete" onClick={()=> props.handleDeleteComment(postId, commentId)}>
           <span className="material-symbols-outlined">delete</span>
           </button>
         </div>
         }
-
       </div>
 
 

@@ -1,0 +1,16 @@
+.price {
+  width: fit-content;
+}
+
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+}

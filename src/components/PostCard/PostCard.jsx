@@ -20,7 +20,11 @@ const PostCard  = ({post, user, handleDeletePost, handleLike}) => {
                     <div className="container">
                         <h3>{post.author?.name} had a {post.item?.itemTitle} at {post.restaurant?.title}</h3>
                         <h4>{post.item?.itemPrice}</h4>
+                            { post.photo ?
                             <img src={post?.photo} alt="" />
+                            :
+                            <img src="/Foodpic.jpg" alt="" />
+                            }
                     </div>
                 </div>
             </Link>

@@ -34,14 +34,19 @@ const PostDetails = (props) => {
       <div className="card">
       <Link className="text-link" to={`/profiles/${profile.name}`} state={{profile}}>
         <div className="card-body">
-          <h5>{postDetails?.author.name} had a {postDetails?.item?.itemTitle} at {postDetails?.restaurant?.title}</h5>
-          <h5>{postDetails.item?.itemPrice}</h5>
-          <h3>{postDetails?.review}</h3>
-          <img src={postDetails?.photo} alt="" />
+        <div className="container">
+          <h3>{postDetails?.author.name} had a {postDetails?.item?.itemTitle} at {postDetails?.restaurant?.title}</h3>
+          <h4>{postDetails.item?.itemPrice}</h4>
+          <h5>{postDetails?.review}</h5>
+          { postDetails.photo ?
+            <img src={postDetails?.photo} alt="" />
+            :
+            <img src="/Foodpic.jpg" alt="" />
+            }
+          </div>
         </div>
         </Link>
       </div>
-
         <CommentSection postDetails={postDetails} setPostDetails={setPostDetails} handleDeleteComment={handleDeleteComment} profile={props.user.profile} />
       </div>
       </>

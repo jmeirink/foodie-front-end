@@ -47,6 +47,7 @@ const ChangePasswordForm = props => {
           Current Password
         </label>
         <input
+          className={styles.passwordInput}
           type="password"
           autoComplete="off"
           id="password"
@@ -60,6 +61,7 @@ const ChangePasswordForm = props => {
           New Password
         </label>
         <input
+          className={styles.passwordInput}
           type="password"
           autoComplete="off"
           id="newPassword"
@@ -73,6 +75,7 @@ const ChangePasswordForm = props => {
           Confirm New Password
         </label>
         <input
+          className={styles.passwordInput}
           type="password"
           autoComplete="off"
           id="newPasswordConf"

@@ -1,3 +1,10 @@
+  .container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  }
+  
   .content {
     display: flex;
     flex-direction: column;
@@ -8,6 +15,7 @@
     background-color: gray;
     right: 0px;
     position: absolute;
+    align-items: center;
   }
 
   h1 {

@@ -1,0 +1,39 @@
+
+.addComment {
+  align-items: center;
+  display: flex;
+  margin-top: 2vh;
+  width: 50vw;
+  height: 20vh;
+  margin-bottom: 3vh;
+  padding-top: 1.5vh ;
+  border-radius: 5px;
+}
+
+.addCommentHeader {
+  margin-top: 5px;
+  border-bottom: solid 2px grey ;
+  width: 40vw;
+}
+
+.commentButton {
+  margin-top: 15px;
+}
+
+.commentInput {
+  margin-top: 10px;
+  width: 30vw;
+  border: solid 3px darkslategray;
+}
+
+@media only screen and (min-width: 1550px) {
+  .addComment {
+    width: 30vw;
+  }
+  .commentInput {
+    width: 20vw;
+  }
+  .addCommentHeader {
+    width: 20vw;
+  }
+}
