@@ -11,9 +11,7 @@ Elijah Andrews - https://github.com/ElijahSMIAEL
 Eduardo Gonzalez - https://github.com/eagonzalez1
 </br></br>
 
-************Screenshots here*********** (delete)
-<img src="">
-<img src="">
+<img src="./public/FoodiePrev.png">
 </br></br>
 
 
