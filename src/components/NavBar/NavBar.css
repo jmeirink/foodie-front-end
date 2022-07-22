@@ -9,6 +9,10 @@
   margin-bottom: 30px;
 }
 
+.sidebar {
+  background-color: white;
+}
+
 .sidebarOption {
   display: flex;
   align-items: center;

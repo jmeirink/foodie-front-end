@@ -6,6 +6,9 @@ div > h3 {
   margin-top: 1vh;
 }
 
+.restaurantPrompt {
+  color: red;
+}
 
 @media only screen and (min-width: 1550px) {
   div > h3 {

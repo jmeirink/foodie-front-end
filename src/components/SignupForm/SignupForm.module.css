@@ -5,11 +5,40 @@
   align-items: center;
 }
 
-.label,
-.button {
-  margin-right: .5rem;
+label {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.signupContainer {
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .inputContainer {
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signupInput {
+  width: 30vw;
+  font-size: 1.5rem;
+}
+
+.button {
+  font-size: 1.5rem;
+}
+
+body {
+  background-color: grey;
+}
+
+@media only screen and (max-width: 1550px) {
+  .signupInput {
+    width: 50vw;
+  }
 }

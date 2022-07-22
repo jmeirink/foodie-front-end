@@ -35,6 +35,7 @@ const LoginForm = props => {
       <div className={styles.inputContainer}>
         <label htmlFor="email" className={styles.label}>Email</label>
         <input
+          className={styles.loginInput}
           type="text"
           autoComplete="off"
           id="email"
@@ -47,6 +48,7 @@ const LoginForm = props => {
         <label htmlFor="password" className={styles.label}>Password</label>
         <input
           type="password"
+          className={styles.loginInput}
           autoComplete="off"
           id="password"
           value={formData.pw}
@@ -54,7 +56,7 @@ const LoginForm = props => {
           onChange={handleChange}
         />
       </div>
-      <div>
+      <div className={styles.loginButtons}>
         <button className={styles.button}>Log In</button>
         <Link to="/">
           <button>Cancel</button>
