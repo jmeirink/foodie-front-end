@@ -4,7 +4,7 @@
   display: flex;
   margin-top: 2vh;
   width: 50vw;
-  height: 20vh;
+  height: fit-content;
   margin-bottom: 3vh;
   padding-top: 1.5vh ;
   border-radius: 5px;
