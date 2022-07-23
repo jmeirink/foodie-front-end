@@ -48,7 +48,6 @@ const ProfileDetails = (props) => {
             <img src="/BurgerLogo.jpg" alt=""/>
           }
         </div>
-
         <div className={styles.bioContainer}>
           {profileDetails.bio ? 
             <h2 className={styles.bio}>"{profileDetails.bio}"</h2>
@@ -57,7 +56,6 @@ const ProfileDetails = (props) => {
           }
         </div>
       </div>
-      
       <div className="container">
         <h1 className="posts-text">Posts</h1>
         {ownedPosts.map(post =>
@@ -69,7 +67,7 @@ const ProfileDetails = (props) => {
             handleLike={handleLike}
           />
         )}
-        </div>
+      </div>
     </div>
   )
 }

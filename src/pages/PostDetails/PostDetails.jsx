@@ -29,27 +29,27 @@ const PostDetails = (props) => {
   const profile = postDetails.author
   
   return (  
-      <>
+    <>
       <div className="container text-center">
-      <div className="card">
-      <Link className="text-link" to={`/profiles/${profile.name}`} state={{profile}}>
-        <div className="card-body">
-        <div className="container">
-          <h3>{postDetails?.author.name} had a {postDetails?.item?.itemTitle} at {postDetails?.restaurant?.title}</h3>
-          <h4>{postDetails.item?.itemPrice}</h4>
-          <h5>{postDetails?.review}</h5>
-          { postDetails.photo ?
-            <img src={postDetails?.photo} alt="" />
-            :
-            <img src="/Foodpic.jpg" alt="" />
-            }
-          </div>
+        <div className="card">
+          <Link className="text-link" to={`/profiles/${profile.name}`} state={{profile}}>
+            <div className="card-body">
+              <div className="container">
+                <h3>{postDetails?.author.name} had a {postDetails?.item?.itemTitle} at {postDetails?.restaurant?.title}</h3>
+                <h4>{postDetails.item?.itemPrice}</h4>
+                <h5>{postDetails?.review}</h5>
+                  { postDetails.photo ?
+                    <img src={postDetails?.photo} alt="" />
+                    :
+                    <img src="/Foodpic.jpg" alt="" />
+                  }
+              </div>
+            </div>
+          </Link>
         </div>
-        </Link>
+          <CommentSection postDetails={postDetails} setPostDetails={setPostDetails} handleDeleteComment={handleDeleteComment} profile={props.user.profile} />
       </div>
-        <CommentSection postDetails={postDetails} setPostDetails={setPostDetails} handleDeleteComment={handleDeleteComment} profile={props.user.profile} />
-      </div>
-      </>
+    </>
   )
 }
 
