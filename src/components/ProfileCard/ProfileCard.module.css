@@ -9,3 +9,10 @@ a:hover {
   text-decoration: none;
   color: black;
 }
+
+.profileCard {
+  background-color: white;
+  width: 30vw;
+  border: solid rgb(65, 65, 65);
+  box-shadow: 10px 10px 5px black;
+}

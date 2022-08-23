@@ -5,7 +5,7 @@ import styles from './ProfileCard.module.css'
 const ProfileCard = (props) => {
   const profile = props.profile
   return(
-    <div className="card">
+    <div className={styles.profileCard}>
       <div className="card-body">
           <Link to={`/profiles/${props.profile.name}`} state={{profile}}>
         <div className="friends-avatar text-center" >
